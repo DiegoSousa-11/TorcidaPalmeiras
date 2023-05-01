@@ -36,6 +36,10 @@
     background-color: var(--green);
 }
 
+img {
+    user-select: none;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -413,4 +417,79 @@ section button:hover {
     border: 1px solid transparent;
     background-color: var(--green);
     color: #FFF;
+}
+
+.rightContent .nextMatch .match {
+    background-color: #FFF;
+    filter: drop-shadow(2px 2px 5px rgba(0, 100, 50, 0.5));
+}
+
+footer {
+    display: flex;
+    align-items: center;
+
+    padding: 3rem 4rem;
+
+    background-color: var(--green);
+}
+
+footer img {
+    height: 8rem;
+}
+
+footer section {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFF;
+}
+
+footer section > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: .3rem;
+}
+
+footer section h2 {
+    margin-bottom: 1rem;
+}
+
+footer section a {
+    text-decoration: none;
+    
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #FFF;
+
+    opacity: 1;
+    transition: .5s;
+}
+
+footer section a:hover {
+    opacity: .6;
+}
+
+footer .contact .iconify {
+    font-size: 1.2rem;
+}
+
+footer .contact a {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+footer .socialMedia .socialMediaContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .socialMedia .iconify {
+    font-size: 2rem;
 }
