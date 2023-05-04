@@ -1,0 +1,148 @@
+main {
+    display: flex;
+
+    width: 100%;
+    height: 100vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 50vw;
+    max-height: 100vh;
+    padding-block: 2rem;
+
+    overflow-y: scroll;
+}
+
+main > img {
+    width: 50vw;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+
+    gap: 1rem;
+}
+
+.logo img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.logo h1 { 
+    font-size: 1.6rem;
+    font-weight: 900;
+
+    line-height: 2rem;
+
+    color: var(--green);
+}
+
+.switchScreen {
+    display: flex;
+    align-items: center;
+
+    padding: .5rem;
+
+    width: 40%;
+
+    background-color: #E3E3E3;
+    border-radius: 15px;
+}
+
+.switchScreen h2 {
+    z-index: 2;
+    color: #ADADAD;
+
+    margin: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    margin-top: 2rem;
+
+    width: 40%;
+}
+
+.form h2 {
+    font-weight: 800;
+    font-size: 1.8rem;
+
+    color: var(--green);
+}
+
+.form p {
+    color: #949494;
+}
+
+.form form {
+    margin-top: 1rem;
+
+    gap: 1rem;
+}
+
+.form form, .form form > div {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.form form label {
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    margin-right: auto;
+    margin-left: 1rem;
+
+    color: var(--black);
+}
+
+.formInput {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    border: 2px solid #00000020;
+    border-radius: 15px;
+}
+
+.formInput .iconify {
+    font-size: 1.5rem;
+    padding-left: .8rem;
+
+    color: #9b9b9b;
+}
+
+.formInput input {
+    outline: 0;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--green);
+
+    width: 100%;
+    padding: 1rem;
+    
+    border: 0;
+    border-radius: 15px;
+}
+
+.form button {
+    width: 100%;
+}
