@@ -194,6 +194,8 @@ section button:hover {
 .newsItem {
     cursor: pointer;
 
+    text-decoration: none;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -202,7 +204,6 @@ section button:hover {
 
     width: 15%;
 
-    background-image: url('https://sep-bucket-prod.s3.amazonaws.com/wp-content/uploads/2023/04/20042023_cg_palmeiras_9531_136.jpg');
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;

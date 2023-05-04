@@ -1,0 +1,777 @@
+{
+    "kind": "customsearch#search",
+    "url": {
+        "type": "application/json",
+        "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    },
+    "queries": {
+        "request": [
+            {
+                "title": "Google Custom Search - Palmeiras",
+                "totalResults": "17200000",
+                "searchTerms": "Palmeiras",
+                "count": 10,
+                "startIndex": 1,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "057530d35dc9a43f6"
+            }
+        ],
+        "nextPage": [
+            {
+                "title": "Google Custom Search - Palmeiras",
+                "totalResults": "17200000",
+                "searchTerms": "Palmeiras",
+                "count": 10,
+                "startIndex": 11,
+                "inputEncoding": "utf8",
+                "outputEncoding": "utf8",
+                "safe": "off",
+                "cx": "057530d35dc9a43f6"
+            }
+        ]
+    },
+    "context": {
+        "title": "TorcidaPalmeiras"
+    },
+    "searchInformation": {
+        "searchTime": 0.309608,
+        "formattedSearchTime": "0.31",
+        "totalResults": "17200000",
+        "formattedTotalResults": "17,200,000"
+    },
+    "items": [
+        {
+            "kind": "customsearch#result",
+            "title": "Palmeiras | Últimas notícias, resultados e próximos jogos | ge",
+            "htmlTitle": "<b>Palmeiras</b> | Últimas notícias, resultados e próximos jogos | ge",
+            "link": "https://ge.globo.com/futebol/times/palmeiras/",
+            "displayLink": "ge.globo.com",
+            "snippet": "Acompanhe as notícias do Palmeiras no ge.globo, próximos jogos, resultados, contratações e muito mais.",
+            "htmlSnippet": "Acompanhe as notícias do <b>Palmeiras</b> no ge.globo, próximos jogos, resultados, contratações e muito mais.",
+            "cacheId": "Ogi9g_JbikMJ",
+            "formattedUrl": "https://ge.globo.com/futebol/times/palmeiras/",
+            "htmlFormattedUrl": "https://ge.globo.com/futebol/times/<b>palmeiras</b>/",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRGlMU0LQSp9b_iB9uYxfygvbLtysFTjZHrIOSjFv8vPeYletovxWbvZM",
+                        "width": "310",
+                        "height": "163"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/preview-share-min.png",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "Palmeiras | Últimas notícias, resultados e próximos jogos | ge",
+                        "og:type": "website",
+                        "og:image:width": "1200",
+                        "og:site_name": "ge",
+                        "og:title": "Palmeiras | Últimas notícias, resultados e próximos jogos | ge",
+                        "title": "Palmeiras | Últimas notícias, resultados e próximos jogos | ge",
+                        "fb:pages": "22344895408, 181167441906402",
+                        "og:description": "Acompanhe as notícias do Palmeiras no ge.globo, próximos jogos, resultados, contratações e muito mais.",
+                        "twitter:image": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/preview-share-min.png",
+                        "fb:app_id": "289255557788943",
+                        "viewport": "width=device-width, initial-scale=1",
+                        "twitter:description": "Acompanhe as notícias do Palmeiras no ge.globo, próximos jogos, resultados, contratações e muito mais.",
+                        "og:locale": "pt_BR",
+                        "og:url": "https://ge.globo.com/futebol/times/palmeiras/"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/preview-share-min.png"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Barcelona-EQU x Palmeiras: onde assistir ao vivo, horário e ...",
+            "htmlTitle": "Barcelona-EQU x <b>Palmeiras</b>: onde assistir ao vivo, horário e ...",
+            "link": "https://ge.globo.com/sp/futebol/libertadores/noticia/2023/05/03/barcelona-equ-x-palmeiras-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml",
+            "displayLink": "ge.globo.com",
+            "snippet": "há 15 horas ... Barcelona de Guayaquil e Palmeiras entram em campo nesta quarta-feira, às 21h30 (de Brasília), no estádio Monumental de Guayaquil, ...",
+            "htmlSnippet": "há 15 horas <b>...</b> Barcelona de Guayaquil e <b>Palmeiras</b> entram em campo nesta quarta-feira, às 21h30 (de Brasília), no estádio Monumental de Guayaquil,&nbsp;...",
+            "cacheId": "wisieQi6DrkJ",
+            "formattedUrl": "https://ge.globo.com/.../barcelona-equ-x-palmeiras-onde-assistir-ao-vivo- horario-e-escalacoes.ghtml",
+            "htmlFormattedUrl": "https://ge.globo.com/.../barcelona-equ-x-<b>palmeiras</b>-onde-assistir-ao-vivo- horario-e-escalacoes.ghtml",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQULbwMEem7JN_0QceC4WrN9bw5-AtktO_Fans3DwhWjpIYi7kLIR7B4g",
+                        "width": "150",
+                        "height": "84"
+                    }
+                ],
+                "imageobject": [
+                    {
+                        "width": "696",
+                        "url": "https://s2.glbimg.com/-a4KtkbzsFij6S0tFPfWlthhsv0=/696x390/smart/filters:cover():strip_icc()/s04.video.glbimg.com/x720/11583139.jpg",
+                        "height": "390"
+                    },
+                    {
+                        "width": "393",
+                        "url": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/components/growth/logo_ge_pirulito.png",
+                        "height": "322"
+                    }
+                ],
+                "organization": [
+                    {
+                        "name": "GE"
+                    },
+                    {
+                        "name": "GE"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://s2.glbimg.com/l-8V1ZALSxJWfjD6-ULaCMziKmA=/1200x/smart/filters:cover():strip_icc()/s04.video.glbimg.com/x720/11583139.jpg",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "Barcelona-EQU x Palmeiras: onde assistir ao vivo, horário e escalações",
+                        "og:type": "article",
+                        "og:image:width": "1200",
+                        "og:site_name": "ge",
+                        "og:title": "Barcelona-EQU x Palmeiras: onde assistir ao vivo, horário e escalações",
+                        "title": "Barcelona-EQU x Palmeiras: onde assistir ao vivo, horário e escalações",
+                        "fb:pages": "22344895408, 181167441906402",
+                        "og:description": "Veja também desfalques, arbitragem e outras informações para a partida válida pela terceira rodada da Conmebol Libertadores",
+                        "twitter:image": "https://s2.glbimg.com/l-8V1ZALSxJWfjD6-ULaCMziKmA=/1200x/smart/filters:cover():strip_icc()/s04.video.glbimg.com/x720/11583139.jpg",
+                        "fb:app_id": "289255557788943",
+                        "viewport": "width=device-width, initial-scale=1",
+                        "twitter:description": "Veja também desfalques, arbitragem e outras informações para a partida válida pela terceira rodada da Conmebol Libertadores",
+                        "og:locale": "pt_BR",
+                        "og:url": "https://ge.globo.com/sp/futebol/libertadores/noticia/2023/05/03/barcelona-equ-x-palmeiras-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
+                    }
+                ],
+                "videoobject": [
+                    {
+                        "uploaddate": "2023-05-02T13:26:18.347Z",
+                        "name": "Palmeiras está no Equador para o jogo contra o Barcelona nesta quarta-feira",
+                        "description": "Palmeiras está no Equador para o jogo contra o Barcelona nesta quarta-feira",
+                        "datepublished": "2023-05-02T13:26:18.347Z",
+                        "thumbnailurl": "https://s04.video.glbimg.com/x240/11583139.jpg"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://s2.glbimg.com/l-8V1ZALSxJWfjD6-ULaCMziKmA=/1200x/smart/filters:cover():strip_icc()/s04.video.glbimg.com/x720/11583139.jpg"
+                    }
+                ],
+                "newsarticle": [
+                    {
+                        "articlebody": "Barcelona de Guayaquil e Palmeiras entram em campo nesta quarta-feira, às 21h30 (de Brasília), no estádio Monumental de Guayaquil, no Equador, pela terceira rodada da fase de grupos da Conmebol...",
+                        "datemodified": "2023-05-03T15:24:04.504Z",
+                        "isaccessibleforfree": "true",
+                        "alternativeheadline": "Veja também desfalques, arbitragem e outras informações para a partida válida pela terceira rodada da Conmebol Libertadores",
+                        "name": "Barcelona-EQU x Palmeiras: onde assistir ao vivo, horário e escalações",
+                        "alternatename": "Veja também desfalques, arbitragem e outras informações para a partida válida pela terceira rodada da Conmebol Libertadores",
+                        "headline": "Barcelona-EQU x Palmeiras: onde assistir ao vivo, horário e escalações",
+                        "datepublished": "2023-05-03T07:00:56.525Z",
+                        "mainentityofpage": "https://ge.globo.com/sp/futebol/libertadores/noticia/2023/05/03/barcelona-equ-x-palmeiras-onde-assistir-ao-vivo-horario-e-escalacoes.ghtml"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Palmeiras: Últimas Notícias, Jogos e Vídeos | UOL Esporte",
+            "htmlTitle": "<b>Palmeiras</b>: Últimas Notícias, Jogos e Vídeos | UOL Esporte",
+            "link": "https://www.uol.com.br/esporte/futebol/times/palmeiras/",
+            "displayLink": "www.uol.com.br",
+            "snippet": "Ao vivo, como assistir, próximos jogos, resultados, escalação, gols, mercado da bola, tabelas, estatísticas e últimas notícias do Palmeiras.",
+            "htmlSnippet": "Ao vivo, como assistir, próximos jogos, resultados, escalação, gols, mercado da bola, tabelas, estatísticas e últimas notícias do <b>Palmeiras</b>.",
+            "formattedUrl": "https://www.uol.com.br/esporte/futebol/times/palmeiras/",
+            "htmlFormattedUrl": "https://www.uol.com.br/esporte/futebol/times/<b>palmeiras</b>/",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRqk1ivuqbHt90DHuFyYHGg8fRCLiEOcWy-PyUmlmSGJ2kMzD8s8-fpnhE",
+                        "width": "300",
+                        "height": "168"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "p:domain_verify": "3773adcdaf781c767a0dca14277f9101",
+                        "og:image": "https://conteudo.imguol.com.br/c/_layout/v3/logoUOL2021/default-share/esporte.png",
+                        "og:type": "article",
+                        "twitter:title": "UOL Esporte: Acompanhe ao vivo os principais eventos esportivos no Brasil e do mundo",
+                        "twitter:card": "summary_large_image",
+                        "og:title": "UOL Esporte: Acompanhe ao vivo os principais eventos esportivos no Brasil e do mundo",
+                        "fb:pages": "115401215190141",
+                        "og:description": "Acompanhe no UOL Esporte as Últimas notícias, fotos, vídeos, dicas e competições de futebol e provas de outras modalidades",
+                        "article:publisher": "https://www.facebook.com/UOL",
+                        "twitter:image": "https://conteudo.imguol.com.br/c/_layout/v3/logoUOL2021/default-share/esporte.png",
+                        "referrer": "no-referrer-when-downgrade",
+                        "fb:app_id": "190329594333794",
+                        "msapplication-tap-highlight": "no",
+                        "twitter:site": "UOLEsporte @UOL",
+                        "viewport": "width=device-width, viewport-fit=cover, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=10.0",
+                        "twitter:description": "Acompanhe no UOL Esporte as Últimas notícias, fotos, vídeos, dicas e competições de futebo...",
+                        "og:locale": "pt_BR",
+                        "og:url": "https://www.uol.com.br/esporte/futebol/times/palmeiras/",
+                        "format-detection": "telephone=no",
+                        "article:opinion": "false"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://conteudo.imguol.com.br/c/_layout/v3/logoUOL2021/default-share/esporte.png"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Fortaleza x Palmeiras: Torcida do Leão reage ao sorteio da Copa ...",
+            "htmlTitle": "Fortaleza x <b>Palmeiras</b>: Torcida do Leão reage ao sorteio da Copa ...",
+            "link": "https://ge.globo.com/ce/futebol/times/fortaleza/noticia/2023/05/02/fortaleza-x-palmeiras-torcida-do-leao-reage-ao-sorteio-da-copa-do-brasil-e-enche-web-de-memes.ghtml",
+            "displayLink": "ge.globo.com",
+            "snippet": "há 1 dia ... Fortaleza x Palmeiras: Torcida do Leão reage ao sorteio da Copa do Brasil e enche web de memes · Sorteio definiu confrontos das oitavas de final ...",
+            "htmlSnippet": "há 1 dia <b>...</b> Fortaleza x <b>Palmeiras</b>: Torcida do Leão reage ao sorteio da Copa do Brasil e enche web de memes &middot; Sorteio definiu confrontos das oitavas de final&nbsp;...",
+            "cacheId": "nAN0hQD2EJwJ",
+            "formattedUrl": "https://ge.globo.com/.../fortaleza-x-palmeiras-torcida-do-leao-reage-ao- sorteio-da-copa-do-brasil-e-enche-web-de-memes.ghtml",
+            "htmlFormattedUrl": "https://ge.globo.com/.../fortaleza-x-<b>palmeiras</b>-torcida-do-leao-reage-ao- sorteio-da-copa-do-brasil-e-enche-web-de-memes.ghtml",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZcaWeAmI8x9wnYTfMZ91pyVfoNu2_6NCAwYM2wLx57YhqPWrHOhkiqXC9",
+                        "width": "230",
+                        "height": "219"
+                    }
+                ],
+                "imageobject": [
+                    {
+                        "width": "696",
+                        "url": "https://s2.glbimg.com/9emhk4K2u2yhN9FNnjaLMZB5yNY=/696x390/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/h/J/umtsi6TLOpT5vUIdfV4A/ththt.png",
+                        "height": "390"
+                    },
+                    {
+                        "width": "393",
+                        "url": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/components/growth/logo_ge_pirulito.png",
+                        "height": "322"
+                    }
+                ],
+                "organization": [
+                    {
+                        "name": "GE"
+                    },
+                    {
+                        "name": "GE"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://s2.glbimg.com/JJYii94ZOTWrXgV_M43m79L_2c0=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/h/J/umtsi6TLOpT5vUIdfV4A/ththt.png",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "Fortaleza x Palmeiras: Torcida do Leão reage ao sorteio da Copa do Brasil e enche web de memes",
+                        "og:type": "article",
+                        "og:image:width": "1200",
+                        "og:site_name": "ge",
+                        "og:title": "Fortaleza x Palmeiras: Torcida do Leão reage ao sorteio da Copa do Brasil e enche web de memes",
+                        "title": "Fortaleza x Palmeiras: Torcida do Leão reage ao sorteio da Copa do Brasil e enche web de memes",
+                        "fb:pages": "22344895408, 181167441906402",
+                        "og:description": "Sorteio definiu confrontos das oitavas de final nesta terça-feira",
+                        "twitter:image": "https://s2.glbimg.com/JJYii94ZOTWrXgV_M43m79L_2c0=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/h/J/umtsi6TLOpT5vUIdfV4A/ththt.png",
+                        "fb:app_id": "289255557788943",
+                        "viewport": "width=device-width, initial-scale=1",
+                        "twitter:description": "Sorteio definiu confrontos das oitavas de final nesta terça-feira",
+                        "og:locale": "pt_BR",
+                        "og:url": "https://ge.globo.com/ce/futebol/times/fortaleza/noticia/2023/05/02/fortaleza-x-palmeiras-torcida-do-leao-reage-ao-sorteio-da-copa-do-brasil-e-enche-web-de-memes.ghtml"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://s2.glbimg.com/JJYii94ZOTWrXgV_M43m79L_2c0=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2023/h/J/umtsi6TLOpT5vUIdfV4A/ththt.png"
+                    }
+                ],
+                "newsarticle": [
+                    {
+                        "articlebody": "O Fortaleza vai encarar o Palmeiras nas oitavas de final da Copa do Brasil. Nas redes sociais, o torcedor do Leão repercutiu o resultado do sorteio. Enquanto alguns mostraram confiança, outros...",
+                        "datemodified": "2023-05-02T17:42:25.373Z",
+                        "isaccessibleforfree": "true",
+                        "alternativeheadline": "Sorteio definiu confrontos das oitavas de final nesta terça-feira",
+                        "name": "Fortaleza x Palmeiras: Torcida do Leão reage ao sorteio da Copa do Brasil e enche web de memes",
+                        "alternatename": "Sorteio definiu confrontos das oitavas de final nesta terça-feira",
+                        "headline": "Fortaleza x Palmeiras: Torcida do Leão reage ao sorteio da Copa do Brasil e enche web de memes",
+                        "datepublished": "2023-05-02T17:42:05.008Z",
+                        "mainentityofpage": "https://ge.globo.com/ce/futebol/times/fortaleza/noticia/2023/05/02/fortaleza-x-palmeiras-torcida-do-leao-reage-ao-sorteio-da-copa-do-brasil-e-enche-web-de-memes.ghtml"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Jogo Palmeiras 2 x 1 Corinthians melhores momentos ...",
+            "htmlTitle": "Jogo <b>Palmeiras</b> 2 x 1 Corinthians melhores momentos ...",
+            "link": "https://ge.globo.com/sp/futebol/brasileirao-serie-a/jogo/29-04-2023/palmeiras-corinthians.ghtml",
+            "displayLink": "ge.globo.com",
+            "snippet": "há 5 dias ... Saiba tudo sobre o jogo Palmeiras 2 x 1 Corinthians (Campeonato Brasileiro, Rodada 3). Veja no ge os melhores momentos e o placar do jogo, ...",
+            "htmlSnippet": "há 5 dias <b>...</b> Saiba tudo sobre o jogo <b>Palmeiras</b> 2 x 1 Corinthians (Campeonato Brasileiro, Rodada 3). Veja no ge os melhores momentos e o placar do jogo,&nbsp;...",
+            "cacheId": "pn5Psg9mtcUJ",
+            "formattedUrl": "https://ge.globo.com/sp/futebol/brasileirao.../palmeiras-corinthians.ghtml",
+            "htmlFormattedUrl": "https://ge.globo.com/sp/futebol/brasileirao.../<b>palmeiras</b>-corinthians.ghtml",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRGlMU0LQSp9b_iB9uYxfygvbLtysFTjZHrIOSjFv8vPeYletovxWbvZM",
+                        "width": "310",
+                        "height": "163"
+                    }
+                ],
+                "WebPage": [
+                    {
+                        "image": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/preview-share-min.png",
+                        "name": "Jogo Palmeiras 2 x 1 Corinthians melhores momentos",
+                        "description": "Saiba tudo sobre o jogo Palmeiras 2 x 1 Corinthians",
+                        "url": "https://ge.globo.com/sp/futebol/brasileirao-serie-a/jogo/29-04-2023/palmeiras-corinthians.ghtml"
+                    }
+                ],
+                "Organization": [
+                    {
+                        "name": "Ge",
+                        "url": "https://ge.globo.com/"
+                    }
+                ],
+                "SportsEvent": [
+                    {
+                        "name": "Jogo Palmeiras 2 x 1 Corinthians melhores momentos",
+                        "startDate": "2023-04-29T18:30:00-03:00"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/preview-share-min.png",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "Jogo Palmeiras 2 x 1 Corinthians melhores momentos - Campeonato Brasileiro, Rodada 3 - tempo real | ge",
+                        "og:type": "website",
+                        "og:image:width": "1200",
+                        "og:site_name": "ge",
+                        "og:title": "Jogo Palmeiras 2 x 1 Corinthians melhores momentos - Campeonato Brasileiro, Rodada 3 - tempo real | ge",
+                        "title": "Jogo Palmeiras 2 x 1 Corinthians melhores momentos - Campeonato Brasileiro, Rodada 3 - tempo real | ge",
+                        "fb:pages": "22344895408, 181167441906402",
+                        "og:description": "Saiba tudo sobre o jogo Palmeiras 2 x 1 Corinthians (Campeonato Brasileiro, Rodada 3). Veja no ge os melhores momentos e o placar do jogo, gols e lances da partida.",
+                        "twitter:image": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/preview-share-min.png",
+                        "fb:app_id": "289255557788943",
+                        "viewport": "width=device-width, initial-scale=1",
+                        "twitter:description": "Saiba tudo sobre o jogo Palmeiras 2 x 1 Corinthians (Campeonato Brasileiro, Rodada 3). Veja no ge os melhores momentos e o placar do jogo, gols e lances da partida.",
+                        "og:locale": "pt_BR",
+                        "og:url": "https://ge.globo.com/sp/futebol/brasileirao-serie-a/jogo/29-04-2023/palmeiras-corinthians.ghtml"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/preview-share-min.png"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Vídeos do Palmeiras na TV | palmeiras | ge",
+            "htmlTitle": "Vídeos do <b>Palmeiras</b> na TV | <b>palmeiras</b> | ge",
+            "link": "https://ge.globo.com/futebol/times/palmeiras/playlist/videos-do-palmeiras-no-sportv.ghtml",
+            "displayLink": "ge.globo.com",
+            "snippet": "Infelizmente, não foi possível encontrar um vídeo compatível com o seu dispositivo. 3 de mai de 2023 às 15:08. Palmeiras batiza Núcleo de saúde com nome de ...",
+            "htmlSnippet": "Infelizmente, não foi possível encontrar um vídeo compatível com o seu dispositivo. 3 de mai de 2023 às 15:08. <b>Palmeiras</b> batiza Núcleo de saúde com nome de&nbsp;...",
+            "formattedUrl": "https://ge.globo.com/.../palmeiras/.../videos-do-palmeiras-no-sportv.ghtml",
+            "htmlFormattedUrl": "https://ge.globo.com/.../<b>palmeiras</b>/.../videos-do-<b>palmeiras</b>-no-sportv.ghtml",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQjZ2RQXPgjjGAkuyei_a_EDXC0Xg_p35GTI9-eb3lYp32TxK0UmDGtCIA",
+                        "width": "300",
+                        "height": "168"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "http://s2.glbimg.com/maQm_9YeeIdosYz2Z17Rn2R0Vxo=/filters:max_age(3600)/s04.video.glbimg.com/deo/vi/83/58/11445883",
+                        "og:type": "video.other",
+                        "og:image:width": "1200",
+                        "og:site_name": "ge",
+                        "viewport": "width=device-width, initial-scale=1",
+                        "og:title": "Vídeos do Palmeiras na TV",
+                        "og:locale": "pt_BR",
+                        "title": "Vídeos do Palmeiras na TV",
+                        "og:url": "https://ge.globo.com/futebol/times/palmeiras/playlist/videos-do-palmeiras-no-sportv.ghtml",
+                        "og:description": "Vídeos do Palmeiras na TV"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "http://s2.glbimg.com/maQm_9YeeIdosYz2Z17Rn2R0Vxo=/filters:max_age(3600)/s04.video.glbimg.com/deo/vi/83/58/11445883"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Jogo Palmeiras 7 x 0 Realidade Jovem melhores momentos ...",
+            "htmlTitle": "Jogo <b>Palmeiras</b> 7 x 0 Realidade Jovem melhores momentos ...",
+            "link": "https://ge.globo.com/sp/campinas-e-regiao/futebol/futebol-feminino/paulista-feminino/jogo/02-05-2023/palmeiras-realidade-jovem.ghtml",
+            "displayLink": "ge.globo.com",
+            "snippet": "há 1 dia ... Saiba tudo sobre o jogo Palmeiras 7 x 0 Realidade Jovem (Campeonato Paulista Feminino, Rodada 1). Veja no ge os melhores momentos e o placar ...",
+            "htmlSnippet": "há 1 dia <b>...</b> Saiba tudo sobre o jogo <b>Palmeiras</b> 7 x 0 Realidade Jovem (Campeonato Paulista Feminino, Rodada 1). Veja no ge os melhores momentos e o placar&nbsp;...",
+            "cacheId": "HsIOGMqk1q0J",
+            "formattedUrl": "https://ge.globo.com/sp/campinas.../palmeiras-realidade-jovem.ghtml",
+            "htmlFormattedUrl": "https://ge.globo.com/sp/campinas.../<b>palmeiras</b>-realidade-jovem.ghtml",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdRGlMU0LQSp9b_iB9uYxfygvbLtysFTjZHrIOSjFv8vPeYletovxWbvZM",
+                        "width": "310",
+                        "height": "163"
+                    }
+                ],
+                "WebPage": [
+                    {
+                        "image": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/preview-share-min.png",
+                        "name": "Jogo Palmeiras 7 x 0 Realidade Jovem melhores",
+                        "description": "Saiba tudo sobre o jogo Palmeiras 7 x 0 Realidade",
+                        "url": "https://ge.globo.com/sp/campinas-e-regiao/futebol/futebol-feminino/paulista-feminino/jogo/02-05-2023/palmeiras-realidade-jovem.ghtml"
+                    }
+                ],
+                "Organization": [
+                    {
+                        "name": "Ge",
+                        "url": "https://ge.globo.com/"
+                    }
+                ],
+                "SportsEvent": [
+                    {
+                        "name": "Jogo Palmeiras 7 x 0 Realidade Jovem melhores",
+                        "startDate": "2023-05-02T15:30:00-03:00"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/preview-share-min.png",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "Jogo Palmeiras 7 x 0 Realidade Jovem melhores momentos - Campeonato Paulista Feminino, Rodada 1 - tempo real | ge",
+                        "og:type": "website",
+                        "og:image:width": "1200",
+                        "og:site_name": "ge",
+                        "og:title": "Jogo Palmeiras 7 x 0 Realidade Jovem melhores momentos - Campeonato Paulista Feminino, Rodada 1 - tempo real | ge",
+                        "title": "Jogo Palmeiras 7 x 0 Realidade Jovem melhores momentos - Campeonato Paulista Feminino, Rodada 1 - tempo real | ge",
+                        "fb:pages": "22344895408, 181167441906402",
+                        "og:description": "Saiba tudo sobre o jogo Palmeiras 7 x 0 Realidade Jovem (Campeonato Paulista Feminino, Rodada 1). Veja no ge os melhores momentos e o placar do jogo, gols e lances da partida.",
+                        "twitter:image": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/preview-share-min.png",
+                        "fb:app_id": "289255557788943",
+                        "viewport": "width=device-width, initial-scale=1",
+                        "twitter:description": "Saiba tudo sobre o jogo Palmeiras 7 x 0 Realidade Jovem (Campeonato Paulista Feminino, Rodada 1). Veja no ge os melhores momentos e o placar do jogo, gols e lances da partida.",
+                        "og:locale": "pt_BR",
+                        "og:url": "https://ge.globo.com/sp/campinas-e-regiao/futebol/futebol-feminino/paulista-feminino/jogo/02-05-2023/palmeiras-realidade-jovem.ghtml"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/preview-share-min.png"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Barcelona x Palmeiras: técnico rival já citou Abel como melhor do ...",
+            "htmlTitle": "Barcelona x <b>Palmeiras</b>: técnico rival já citou Abel como melhor do ...",
+            "link": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/03/barcelona-x-palmeiras-tecnico-rival-ja-citou-abel-como-melhor-do-brasil-e-teve-problema-com-goulart.ghtml",
+            "displayLink": "ge.globo.com",
+            "snippet": "há 13 horas ... Infelizmente, não foi possível encontrar um vídeo compatível com o seu dispositivo. Veja a chegada dos jogadores do Palmeiras para treino no ...",
+            "htmlSnippet": "há 13 horas <b>...</b> Infelizmente, não foi possível encontrar um vídeo compatível com o seu dispositivo. Veja a chegada dos jogadores do <b>Palmeiras</b> para treino no&nbsp;...",
+            "formattedUrl": "https://ge.globo.com/.../palmeiras/.../barcelona-x-palmeiras-tecnico-rival-ja- citou-abel-como-melhor-do-brasil-e-teve-problema-com-goulart.ghtml",
+            "htmlFormattedUrl": "https://ge.globo.com/.../<b>palmeiras</b>/.../barcelona-x-<b>palmeiras</b>-tecnico-rival-ja- citou-abel-como-melhor-do-brasil-e-teve-problema-com-goulart.ghtml",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS2mo19J-FHpT51tVKJEqZbZrN-ia4_4yV96xpvSqNWjzIP6-4fWJXV-_0",
+                        "width": "299",
+                        "height": "169"
+                    }
+                ],
+                "imageobject": [
+                    {
+                        "width": "696",
+                        "url": "https://s2.glbimg.com/kEnfCCXFrqmWmlgwXmt64gifqhM=/696x390/smart/filters:cover():strip_icc()/s03.video.glbimg.com/x720/11584058.jpg",
+                        "height": "390"
+                    },
+                    {
+                        "width": "393",
+                        "url": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/components/growth/logo_ge_pirulito.png",
+                        "height": "322"
+                    }
+                ],
+                "person": [
+                    {
+                        "name": "Thiago Ferri"
+                    }
+                ],
+                "organization": [
+                    {
+                        "name": "GE"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://s2.glbimg.com/LKk5PrVEEsdKlGoXvpCBEo1xF2c=/1200x/smart/filters:cover():strip_icc()/s03.video.glbimg.com/x720/11584058.jpg",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "Barcelona x Palmeiras: técnico rival já citou Abel como melhor do Brasil e teve problema com Goulart",
+                        "og:type": "article",
+                        "og:image:width": "1200",
+                        "og:site_name": "ge",
+                        "og:title": "Barcelona x Palmeiras: técnico rival já citou Abel como melhor do Brasil e teve problema com Goulart",
+                        "ia:markup_url": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/03/barcelona-x-palmeiras-tecnico-rival-ja-citou-abel-como-melhor-do-brasil-e-teve-problema-com-goulart.ghtml",
+                        "title": "Barcelona x Palmeiras: técnico rival já citou Abel como melhor do Brasil e teve problema com Goulart",
+                        "fb:pages": "22344895408, 181167441906402",
+                        "og:description": "Fabián Bustos lidera a equipe equatoriana depois de passar pelo Santos, em 2022",
+                        "twitter:image": "https://s2.glbimg.com/LKk5PrVEEsdKlGoXvpCBEo1xF2c=/1200x/smart/filters:cover():strip_icc()/s03.video.glbimg.com/x720/11584058.jpg",
+                        "fb:app_id": "289255557788943",
+                        "viewport": "width=device-width, initial-scale=1",
+                        "twitter:description": "Fabián Bustos lidera a equipe equatoriana depois de passar pelo Santos, em 2022",
+                        "og:locale": "pt_BR",
+                        "og:url": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/03/barcelona-x-palmeiras-tecnico-rival-ja-citou-abel-como-melhor-do-brasil-e-teve-problema-com-goulart.ghtml"
+                    }
+                ],
+                "videoobject": [
+                    {
+                        "uploaddate": "2023-05-02T22:20:31.875Z",
+                        "name": "Veja a chegada dos jogadores do Palmeiras para treino no Equador",
+                        "description": "Veja a chegada dos jogadores do Palmeiras para treino no Equador",
+                        "datepublished": "2023-05-02T22:20:31.875Z",
+                        "thumbnailurl": "https://s03.video.glbimg.com/x240/11584058.jpg"
+                    },
+                    {
+                        "uploaddate": "2023-05-02T22:20:31.875Z",
+                        "name": "Relembre como foi a passagem de Bustos pelo Santos",
+                        "description": "Relembre como foi a passagem de Bustos pelo Santos",
+                        "datepublished": "2023-05-02T22:20:31.875Z",
+                        "thumbnailurl": "https://s03.video.glbimg.com/x240/10745738.jpg"
+                    },
+                    {
+                        "uploaddate": "2023-05-02T22:20:31.875Z",
+                        "name": "Bocca e Márcio debatem sobre Palmeiras x Fortaleza, pela Copa do Brasil: \"O Abel Ferreira faz toda a diferença\"",
+                        "description": "Bocca e Márcio debatem sobre Palmeiras x Fortaleza, pela Copa do Brasil: \"O Abel Ferreira faz toda a diferença\"",
+                        "datepublished": "2023-05-02T22:20:31.875Z",
+                        "thumbnailurl": "https://s04.video.glbimg.com/x240/11583911.jpg"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://s2.glbimg.com/LKk5PrVEEsdKlGoXvpCBEo1xF2c=/1200x/smart/filters:cover():strip_icc()/s03.video.glbimg.com/x720/11584058.jpg"
+                    }
+                ],
+                "newsarticle": [
+                    {
+                        "articlebody": "Abel Ferreira ainda não enfrentou o Barcelona, do Equador, seu rival desta quarta-feira pela Conmebol Libertadores, às 21h30 (de Brasília), mas o treinador do outro lado do campo já esteve...",
+                        "datemodified": "2023-05-03T09:00:26.219Z",
+                        "isaccessibleforfree": "true",
+                        "alternativeheadline": "Fabián Bustos lidera a equipe equatoriana depois de passar pelo Santos, em 2022",
+                        "name": "Barcelona x Palmeiras: técnico rival já citou Abel como melhor do Brasil e teve problema com Goulart",
+                        "alternatename": "Fabián Bustos lidera a equipe equatoriana depois de passar pelo Santos, em 2022",
+                        "headline": "Barcelona x Palmeiras: técnico rival já citou Abel como melhor do Brasil e teve problema com Goulart",
+                        "datepublished": "2023-05-03T09:00:25.918Z",
+                        "mainentityofpage": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/03/barcelona-x-palmeiras-tecnico-rival-ja-citou-abel-como-melhor-do-brasil-e-teve-problema-com-goulart.ghtml"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Escalação: Palmeiras treina no Equador, e Abel pode repetir time ...",
+            "htmlTitle": "Escalação: <b>Palmeiras</b> treina no Equador, e Abel pode repetir time ...",
+            "link": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/02/escalacao-palmeiras-treina-no-equador-e-abel-pode-repetir-time-depois-de-nove-jogos.ghtml",
+            "displayLink": "ge.globo.com",
+            "snippet": "há 1 dia ... No Equador desde a noite da última segunda-feira, o Palmeiras treinou na cidade de Guayaquil na tarde desta terça-feira e encerrou a ...",
+            "htmlSnippet": "há 1 dia <b>...</b> No Equador desde a noite da última segunda-feira, o <b>Palmeiras</b> treinou na cidade de Guayaquil na tarde desta terça-feira e encerrou a&nbsp;...",
+            "cacheId": "esUMqCkxjawJ",
+            "formattedUrl": "https://ge.globo.com/.../palmeiras/.../escalacao-palmeiras-treina-no-equador-e -abel-pode-repetir-time-depois-de-nove-jogos.ghtml",
+            "htmlFormattedUrl": "https://ge.globo.com/.../<b>palmeiras</b>/.../escalacao-<b>palmeiras</b>-treina-no-equador-e -abel-pode-repetir-time-depois-de-nove-jogos.ghtml",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS2mo19J-FHpT51tVKJEqZbZrN-ia4_4yV96xpvSqNWjzIP6-4fWJXV-_0",
+                        "width": "299",
+                        "height": "169"
+                    }
+                ],
+                "imageobject": [
+                    {
+                        "width": "696",
+                        "url": "https://s2.glbimg.com/kEnfCCXFrqmWmlgwXmt64gifqhM=/696x390/smart/filters:cover():strip_icc()/s03.video.glbimg.com/x720/11584058.jpg",
+                        "height": "390"
+                    },
+                    {
+                        "width": "393",
+                        "url": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/components/growth/logo_ge_pirulito.png",
+                        "height": "322"
+                    }
+                ],
+                "person": [
+                    {
+                        "name": "Thiago Ferri"
+                    }
+                ],
+                "organization": [
+                    {
+                        "name": "GE"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://s2.glbimg.com/LKk5PrVEEsdKlGoXvpCBEo1xF2c=/1200x/smart/filters:cover():strip_icc()/s03.video.glbimg.com/x720/11584058.jpg",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "Escalação: Palmeiras treina no Equador, e Abel pode repetir time depois de nove jogos",
+                        "og:type": "article",
+                        "og:image:width": "1200",
+                        "og:site_name": "ge",
+                        "og:title": "Escalação: Palmeiras treina no Equador, e Abel pode repetir time depois de nove jogos",
+                        "ia:markup_url": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/02/escalacao-palmeiras-treina-no-equador-e-abel-pode-repetir-time-depois-de-nove-jogos.ghtml",
+                        "title": "Escalação: Palmeiras treina no Equador, e Abel pode repetir time depois de nove jogos",
+                        "fb:pages": "22344895408, 181167441906402",
+                        "og:description": "Treinador não consegue escalar a mesma equipe em duas partidas seguidas desde o Paulistão",
+                        "twitter:image": "https://s2.glbimg.com/LKk5PrVEEsdKlGoXvpCBEo1xF2c=/1200x/smart/filters:cover():strip_icc()/s03.video.glbimg.com/x720/11584058.jpg",
+                        "fb:app_id": "289255557788943",
+                        "viewport": "width=device-width, initial-scale=1",
+                        "twitter:description": "Treinador não consegue escalar a mesma equipe em duas partidas seguidas desde o Paulistão",
+                        "og:locale": "pt_BR",
+                        "og:url": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/02/escalacao-palmeiras-treina-no-equador-e-abel-pode-repetir-time-depois-de-nove-jogos.ghtml"
+                    }
+                ],
+                "videoobject": [
+                    {
+                        "uploaddate": "2023-05-02T20:45:26.665Z",
+                        "name": "Palmeiras chega ao Equador, onde enfrenta o Barcelona-EQU pela Libertadores",
+                        "description": "Palmeiras chega ao Equador, onde enfrenta o Barcelona-EQU pela Libertadores",
+                        "datepublished": "2023-05-02T20:45:26.665Z",
+                        "thumbnailurl": "https://s03.video.glbimg.com/x240/11584058.jpg"
+                    },
+                    {
+                        "uploaddate": "2023-05-02T20:45:26.665Z",
+                        "name": "Palmeiras 2 x 1 Cerro Porteño - Melhores Momentos - CONMEBOL Libertadores",
+                        "description": "Palmeiras 2 x 1 Cerro Porteño - Melhores Momentos - CONMEBOL Libertadores",
+                        "datepublished": "2023-05-02T20:45:26.665Z",
+                        "thumbnailurl": "https://s01.video.glbimg.com/x240/11553288.jpg"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://s2.glbimg.com/LKk5PrVEEsdKlGoXvpCBEo1xF2c=/1200x/smart/filters:cover():strip_icc()/s03.video.glbimg.com/x720/11584058.jpg"
+                    }
+                ],
+                "newsarticle": [
+                    {
+                        "articlebody": "No Equador desde a noite da última segunda-feira, o Palmeiras treinou na cidade de Guayaquil na tarde desta terça-feira e encerrou a preparação para o jogo contra o Barcelona, que será...",
+                        "datemodified": "2023-05-02T21:19:14.608Z",
+                        "isaccessibleforfree": "true",
+                        "alternativeheadline": "Treinador não consegue escalar a mesma equipe em duas partidas seguidas desde o Paulistão",
+                        "name": "Escalação: Palmeiras treina no Equador, e Abel pode repetir time depois de nove jogos",
+                        "alternatename": "Treinador não consegue escalar a mesma equipe em duas partidas seguidas desde o Paulistão",
+                        "headline": "Escalação: Palmeiras treina no Equador, e Abel pode repetir time depois de nove jogos",
+                        "datepublished": "2023-05-02T21:19:14.091Z",
+                        "mainentityofpage": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/02/escalacao-palmeiras-treina-no-equador-e-abel-pode-repetir-time-depois-de-nove-jogos.ghtml"
+                    }
+                ]
+            }
+        },
+        {
+            "kind": "customsearch#result",
+            "title": "Agenda: Palmeiras terá maratona em maio com Libertadores ...",
+            "htmlTitle": "Agenda: <b>Palmeiras</b> terá maratona em maio com Libertadores ...",
+            "link": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/02/agenda-palmeiras-tera-maratona-em-maio-com-libertadores-decisao-na-copa-do-brasil-e-classico.ghtml",
+            "displayLink": "ge.globo.com",
+            "snippet": "há 1 dia ... O Palmeiras terá uma intensa agenda de jogos no mês de maio. Serão nove partidas no total, mesmo número do mês anterior, em compromissos ...",
+            "htmlSnippet": "há 1 dia <b>...</b> O <b>Palmeiras</b> terá uma intensa agenda de jogos no mês de maio. Serão nove partidas no total, mesmo número do mês anterior, em compromissos&nbsp;...",
+            "cacheId": "J0jA3L9Xm3wJ",
+            "formattedUrl": "https://ge.globo.com/.../palmeiras/.../agenda-palmeiras-tera-maratona-em- maio-com-libertadores-decisao-na-copa-do-brasil-e-classico.ghtml",
+            "htmlFormattedUrl": "https://ge.globo.com/.../<b>palmeiras</b>/.../agenda-<b>palmeiras</b>-tera-maratona-em- maio-com-libertadores-decisao-na-copa-do-brasil-e-classico.ghtml",
+            "pagemap": {
+                "cse_thumbnail": [
+                    {
+                        "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQGcc5dGJ3HilfJgk0SJvQxdIGnlxCBGmBtlsWuS5ZodkO_rZswK0JWUx-f",
+                        "width": "300",
+                        "height": "168"
+                    }
+                ],
+                "imageobject": [
+                    {
+                        "width": "696",
+                        "url": "https://s2.glbimg.com/LCuISK8n0SsR3cwgYW0Dow1j_so=/696x390/smart/filters:cover():strip_icc()/s02.video.glbimg.com/x720/7597457.jpg",
+                        "height": "390"
+                    },
+                    {
+                        "width": "393",
+                        "url": "https://s3.glbimg.com/v1/AUTH_378ee63fe83141e69caddd838034e850/static/components/growth/logo_ge_pirulito.png",
+                        "height": "322"
+                    }
+                ],
+                "organization": [
+                    {
+                        "name": "GE"
+                    },
+                    {
+                        "name": "GE"
+                    }
+                ],
+                "metatags": [
+                    {
+                        "og:image": "https://s2.glbimg.com/2gehswak9poy0R2hMTX4W7XMoPI=/1200x/smart/filters:cover():strip_icc()/s02.video.glbimg.com/x720/7597457.jpg",
+                        "twitter:card": "summary_large_image",
+                        "twitter:title": "Agenda: Palmeiras terá maratona em maio com Libertadores, decisão na Copa do Brasil e clássico",
+                        "og:type": "article",
+                        "og:image:width": "1200",
+                        "og:site_name": "ge",
+                        "og:title": "Agenda: Palmeiras terá maratona em maio com Libertadores, decisão na Copa do Brasil e clássico",
+                        "ia:markup_url": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/02/agenda-palmeiras-tera-maratona-em-maio-com-libertadores-decisao-na-copa-do-brasil-e-classico.ghtml",
+                        "title": "Agenda: Palmeiras terá maratona em maio com Libertadores, decisão na Copa do Brasil e clássico",
+                        "fb:pages": "22344895408, 181167441906402",
+                        "og:description": "Sequência do Verdão inclui seis jogos fora de casa e apenas três como mandante",
+                        "twitter:image": "https://s2.glbimg.com/2gehswak9poy0R2hMTX4W7XMoPI=/1200x/smart/filters:cover():strip_icc()/s02.video.glbimg.com/x720/7597457.jpg",
+                        "fb:app_id": "289255557788943",
+                        "viewport": "width=device-width, initial-scale=1",
+                        "twitter:description": "Sequência do Verdão inclui seis jogos fora de casa e apenas três como mandante",
+                        "og:locale": "pt_BR",
+                        "og:url": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/02/agenda-palmeiras-tera-maratona-em-maio-com-libertadores-decisao-na-copa-do-brasil-e-classico.ghtml"
+                    }
+                ],
+                "videoobject": [
+                    {
+                        "uploaddate": "2023-05-02T16:05:34.968Z",
+                        "name": "Live analisa sorteio das oitavas da Copa do Brasil",
+                        "description": "Live analisa sorteio das oitavas da Copa do Brasil",
+                        "datepublished": "2023-05-02T16:05:34.968Z",
+                        "thumbnailurl": "https://s02.video.glbimg.com/x240/7597457.jpg"
+                    },
+                    {
+                        "uploaddate": "2023-05-02T16:05:34.968Z",
+                        "name": "Palmeiras está no Equador para o jogo contra o Barcelona nesta quarta-feira",
+                        "description": "Palmeiras está no Equador para o jogo contra o Barcelona nesta quarta-feira",
+                        "datepublished": "2023-05-02T16:05:34.968Z",
+                        "thumbnailurl": "https://s04.video.glbimg.com/x240/11583139.jpg"
+                    }
+                ],
+                "cse_image": [
+                    {
+                        "src": "https://s2.glbimg.com/2gehswak9poy0R2hMTX4W7XMoPI=/1200x/smart/filters:cover():strip_icc()/s02.video.glbimg.com/x720/7597457.jpg"
+                    }
+                ],
+                "newsarticle": [
+                    {
+                        "articlebody": "O Palmeiras terá uma intensa agenda de jogos no mês de maio. Serão nove partidas no total, mesmo número do mês anterior, em compromissos pelo Brasileirão, Copa do Brasil e Conmebol Libertador...",
+                        "datemodified": "2023-05-02T18:30:19.842Z",
+                        "isaccessibleforfree": "true",
+                        "alternativeheadline": "Sequência do Verdão inclui seis jogos fora de casa e apenas três como mandante",
+                        "name": "Agenda: Palmeiras terá maratona em maio com Libertadores, decisão na Copa do Brasil e clássico",
+                        "alternatename": "Sequência do Verdão inclui seis jogos fora de casa e apenas três como mandante",
+                        "headline": "Agenda: Palmeiras terá maratona em maio com Libertadores, decisão na Copa do Brasil e clássico",
+                        "datepublished": "2023-05-02T18:24:19.372Z",
+                        "mainentityofpage": "https://ge.globo.com/futebol/times/palmeiras/noticia/2023/05/02/agenda-palmeiras-tera-maratona-em-maio-com-libertadores-decisao-na-copa-do-brasil-e-classico.ghtml"
+                    }
+                ]
+            }
+        }
+    ]
+}
