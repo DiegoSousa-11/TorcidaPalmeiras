@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="../js/switchLoginAndRegister.js" defer></script>
     <title>Login e Cadastro | Torcida Palmeiras</title>
 </head>
 <body>
@@ -21,87 +22,91 @@
                 </h1>
             </div>
 
-            <div class="switchScreen">
-                <h2>Cadastro</h2>
+            <div onclick="switchScreen()" id="switchScreenContainer" class="switchScreen">
+                <h2 class="activeScreen">Cadastro</h2>
                 <h2>Login</h2>
+
+                <div class="buttonSwitch"></div>
             </div>
 
-            <!-- <div id="signUpForm" class="form">
-                <h2>Crie sua conta</h2>
-                <p>Faça parte da torcida do maior campeão do Brasil agora mesmo!</p>
-
-                <form action="">
-                    <div>
-                        <label>Nome</label>
-                        <div class="formInput">
-                            <span class="iconify" data-icon="tabler:user"></span>
-                            <input type="text" placeholder="Nome">
+            <div class="container">
+                <div id="signUpForm" class="form">
+                    <h2>Crie sua conta</h2>
+                    <p>Faça parte da torcida do maior campeão do Brasil agora mesmo!</p>
+    
+                    <form action="">
+                        <div>
+                            <label>Nome</label>
+                            <div class="formInput">
+                                <span class="iconify" data-icon="tabler:user"></span>
+                                <input type="text" placeholder="Nome">
+                            </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <label>Sobrenome</label>
-                        <div class="formInput">
-                            <span class="iconify" data-icon="tabler:user"></span>
-                            <input type="text" placeholder="Sobrenome">
+    
+                        <div>
+                            <label>Sobrenome</label>
+                            <div class="formInput">
+                                <span class="iconify" data-icon="tabler:user"></span>
+                                <input type="text" placeholder="Sobrenome">
+                            </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <label>Email</label>
-                        <div class="formInput">
-                            <span class="iconify" data-icon="ic:outline-email"></span>
-                            <input type="email" placeholder="exemplo@gmail.com">
+    
+                        <div>
+                            <label>Email</label>
+                            <div class="formInput">
+                                <span class="iconify" data-icon="ic:outline-email"></span>
+                                <input type="email" placeholder="exemplo@gmail.com">
+                            </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <label>Senha</label>
-                        <div class="formInput">
-                            <span class="iconify" data-icon="mdi:password"></span>
-                            <input type="password" placeholder="••••••••">
+    
+                        <div>
+                            <label>Senha</label>
+                            <div class="formInput">
+                                <span class="iconify" data-icon="mdi:password"></span>
+                                <input type="password" placeholder="••••••••">
+                            </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <label>Confirme sua senha</label>
-                        <div class="formInput">
-                            <span class="iconify" data-icon="mdi:password"></span>
-                            <input type="password" placeholder="••••••••">
+    
+                        <div>
+                            <label>Confirme sua senha</label>
+                            <div class="formInput">
+                                <span class="iconify" data-icon="mdi:password"></span>
+                                <input type="password" placeholder="••••••••">
+                            </div>
                         </div>
-                    </div>
-
-                    <button>Cadastrar-se</button>
-                </form>
-            </div> -->
-
-            <div id="signInForm" class="form">
-                <h2>Bem vindo de volta!</h2>
-                <p>Bem vindo de volta, insira seus dados e efetue o seu login!</p>
-
-                <form action="">
-                    <div>
-                        <label>Email</label>
-                        <div class="formInput">
-                            <span class="iconify" data-icon="ic:outline-email"></span>
-                            <input type="email" placeholder="exemplo@gmail.com">
+    
+                        <button>Cadastrar-se</button>
+                    </form>
+                </div>
+    
+                <div id="signInForm" class="form disabledForm">
+                    <h2>Bem vindo de volta!</h2>
+                    <p>Bem vindo de volta, insira seus dados e efetue o seu login!</p>
+    
+                    <form action="">
+                        <div>
+                            <label>Email</label>
+                            <div class="formInput">
+                                <span class="iconify" data-icon="ic:outline-email"></span>
+                                <input type="email" placeholder="exemplo@gmail.com">
+                            </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <label>Senha</label>
-                        <div class="formInput">
-                            <span class="iconify" data-icon="mdi:password"></span>
-                            <input type="password" placeholder="••••••••">
+    
+                        <div>
+                            <label>Senha</label>
+                            <div class="formInput">
+                                <span class="iconify" data-icon="mdi:password"></span>
+                                <input type="password" placeholder="••••••••">
+                            </div>
                         </div>
-                    </div>
-
-                    <button>Entrar</button>
-                </form>
+    
+                        <button>Entrar</button>
+                    </form>
+                </div>
             </div>
         </section>
 
-        <img src="../assets/img/PalmeirasCampeao2020.png" alt="PalmeirasCampeaoLibertadores">
+        <img id="banner" src="../assets/img/PalmeirasCampeao2020.png" alt="PalmeirasCampeaoLibertadores">
     </main>
 </body>
 </html>
