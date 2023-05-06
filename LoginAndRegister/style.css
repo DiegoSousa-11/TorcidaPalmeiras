@@ -110,6 +110,7 @@ main > img {
     text-align: center;
     
     margin-top: 2rem;
+    padding-bottom: 2rem;
 
     width: 40%;
 }
@@ -135,6 +136,16 @@ main > img {
     gap: 1rem;
 }
 
+.form .alerts p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form .alerts .iconify {
+    font-size: 1.5rem;
+}
+
 .form form, .form form > div {
     display: flex;
     flex-direction: column;
@@ -150,6 +161,8 @@ main > img {
     margin-left: 1rem;
 
     color: var(--black);
+
+    transition: .5s;
 }
 
 .formInput {
@@ -159,6 +172,9 @@ main > img {
 
     border: 2px solid #00000020;
     border-radius: 15px;
+
+    transition: .5s;
+
 }
 
 .formInput .iconify {
@@ -166,6 +182,8 @@ main > img {
     padding-left: .8rem;
 
     color: #9b9b9b;
+
+    transition: .5s;
 }
 
 .formInput input {
