@@ -1,0 +1,33 @@
+main {
+    display: flex;
+
+    padding: 4rem;
+    height: calc(90vh - 11rem);
+
+    flex: 1;
+
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/17/Palestra_Italia_1920.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-shadow: inset 110px -150px 118px rgba(0, 0, 0, 0.7);
+}
+
+main .information {
+    width: 50%;
+}
+
+.information h4 {
+    font-size: 4rem;
+    color: #FFFFFF80;
+}
+
+.information h1 {
+    color: #FFF;
+    font-size: 5rem;
+}
+
+.information p {
+    color: #FFFFFF80;
+    font-size: 1.4rem;
+}
