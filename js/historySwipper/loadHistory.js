@@ -2,7 +2,7 @@ const main = document.getElementsByTagName('main')
 const currentCard = document.getElementById('currentHistoryCard');
 const nextCards = document.querySelector('#nextCards .cardsContainer');
 
-var CURRENT_HISTORY_INDEX = 1;
+var CURRENT_HISTORY_INDEX = 0;
 var historyItems = [];
 
 getHistory();

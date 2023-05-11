@@ -1,16 +1,32 @@
-var progressBar = document.querySelector('#progressBar .progress');
+var progress = document.querySelector('#progressBar .progress');
 
-setInterval(() => {
-    openHistory(CURRENT_HISTORY_INDEX + 1);
-}, 5000)
+var progressBarWidth = 0;
 
-// var intervalProgressBar = setInterval(() => increaseProgress(5000), 100);
+var TIME_TO_NEXT_HISTORY = 5000;
+var TIME_TO_UPDATE_PROGRESS = 50;
 
-// function increaseProgress(timeToFinish) {
-    
-// }
+var intervalHistoryController = setInterval(() => {
+    if(CURRENT_HISTORY_INDEX == historyItems.length - 1) {
+        openHistory(0);
+    } else {
+        openHistory(CURRENT_HISTORY_INDEX + 1);
+    }
+}, TIME_TO_NEXT_HISTORY);
+
+var intervalProgressBar = setInterval(() => increaseProgress(), TIME_TO_UPDATE_PROGRESS);
+
+function increaseProgress() {
+    var progressCount = 100/(TIME_TO_NEXT_HISTORY/TIME_TO_UPDATE_PROGRESS)
+
+    progressBarWidth += progressCount;
+
+    progress.style.width = progressBarWidth + '%';
+}
 
 function openHistory(historyIndex) {
+    clearInterval(intervalHistoryController);
+    progressBarWidth = 0;
+
     if(historyIndex !== 0)    
         closeCurrentHistory();
 
@@ -28,9 +44,16 @@ function openHistory(historyIndex) {
             loadHistoryInCards(historyIndex);
         }, 200)
     }, 500);
-    
 
     CURRENT_HISTORY_INDEX = historyIndex;
+
+    intervalHistoryController = setInterval(() => {
+        if(CURRENT_HISTORY_INDEX == historyItems.length - 1) {
+            openHistory(0);
+        } else {
+            openHistory(CURRENT_HISTORY_INDEX + 1);
+        }
+    }, TIME_TO_NEXT_HISTORY);
 
     historyNumber.innerHTML = CURRENT_HISTORY_INDEX + 1;
 }
