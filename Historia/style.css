@@ -14,8 +14,7 @@ main {
     z-index: 4;
     display: flex;
 
-    padding: 4rem;
-    height: calc(90vh - 11rem);
+    height: calc(90vh - 3rem);
 
     margin-top: calc(10vh + 3rem);
 
@@ -31,37 +30,49 @@ main {
 }
 
 main .currentCard {
-    width: 43%;
+    width: 45vw;
+    padding: 4rem;
+    
+    transition: .5s;
+}
+
+main .sectionCards {
+    display: flex;
+    align-items: end;
+
+    width: 55vw;
+    height: 100%;
 }
 
 .currentCard h4 {
     font-size: 3.8rem;
-    color: #FFFFFF90;
-
-    transition: .5s;
+    color: #FFFFFF95;
+    
+    transform-origin: bottom;
+    transition: transform .5s ease;
 }
 
 .currentCard h1 {
     color: #FFF;
     font-size: 4.5rem;
 
-    transition: .5s;
+    transform-origin: bottom;
+    transition: transform .5s ease;
 }
 
 .currentCard p {
-    color: #FFFFFF90;
+    color: #FFFFFF95;
     font-size: 1.3rem;
 
-    transition: .5s;
+    transform-origin: bottom;
+    transition: transform .5s ease;
 }
 
 .nextCards {
     user-select: none;
+    margin-left: 5vw;
+    margin-right: -10vw;
 
-    position: absolute;
-    right: -10rem;
-    bottom: 2rem;
-    
     transition: .5s;
 }
 
@@ -73,24 +84,37 @@ main .currentCard {
 }
 
 .nextCards .card {
+    z-index: 5;
+    
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: end;
-
+    
     box-shadow: inset 50px -50px 118px rgba(0, 0, 0, 0.8);
+    background-repeat: no-repeat;
     background-size: cover;
-
+    background-position: 0% 0%;
+    
     padding: 2rem;
-
+    
     height: 35vh;
     width: 10vw;
-
+    
     overflow: hidden;
-
+    
     border-radius: 15px;
+    
+    transition: all .4s ease-in-out;
+}
 
-    transition: all .5s ease-in-out;
+@keyframes expandir {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 100%;
+    }
 }
 
 .card h1 {
@@ -107,14 +131,18 @@ main .currentCard {
     display: flex;
     align-items: center;
 
+    width: 55vw;
+
     gap: 1.2rem;
 
     padding-inline: 1rem;
 
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 
 .controllers button {
+    z-index: 4;
+
     cursor: pointer;
 
     display: flex;
@@ -127,6 +155,7 @@ main .currentCard {
     padding: .8rem;
 
     border-radius: 50%;
+    margin: 0;
 }
 
 .controllers button .iconify {
@@ -135,7 +164,9 @@ main .currentCard {
 }
 
 .controllers .progressBar {
-    width: 60%;
+    z-index: 4;
+
+    width: 30vw;
     height: .3rem;
 
     background-color: #FFF5;
@@ -149,6 +180,8 @@ main .currentCard {
 }
 
 .controllers h1 {
+    z-index: 4;
+
     font-size: 4rem;
     color: #FFF;
 }

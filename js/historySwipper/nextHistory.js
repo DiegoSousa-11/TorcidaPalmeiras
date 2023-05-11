@@ -1,36 +1,58 @@
-function openHistory(historyIndex, indexInContainer) {
-    closeCurrentHistory();
+var progressBar = document.querySelector('#progressBar .progress');
+
+setInterval(() => {
+    openHistory(CURRENT_HISTORY_INDEX + 1);
+}, 5000)
+
+// var intervalProgressBar = setInterval(() => increaseProgress(5000), 100);
+
+// function increaseProgress(timeToFinish) {
+    
+// }
+
+function openHistory(historyIndex) {
+    if(historyIndex !== 0)    
+        closeCurrentHistory();
 
     setTimeout(() => {
         main.item(0).style.backgroundImage = 'url(' + historyItems[historyIndex].image + ')';
-        currentCard.innerHTML = `
-            <h4>${historyItems[historyIndex].year}</h4>
-            <h1>${historyItems[historyIndex].title}</h1>
-            <p>${historyItems[historyIndex].text}</p>
-        `;
-
+        
+        currentCard.querySelector('h1').innerHTML = historyItems[historyIndex].title;
+        currentCard.querySelector('h4').innerHTML = historyItems[historyIndex].year;
+        currentCard.querySelector('p').innerHTML = historyItems[historyIndex].text;
+        currentCard.style.transform = 'scale(1)';
+        
         main.item(0).style.backgroundSize = '100%';
-        main.item(0).style.transform = 'scale(1)';
-        main.item(0).style.opacity = '1';
+        
+        setTimeout(() => {
+            loadHistoryInCards(historyIndex);
+        }, 200)
     }, 500);
+    
 
-    updateCardList();
+    CURRENT_HISTORY_INDEX = historyIndex;
 
-    CURRENT_HISTORY_INDEX++;
+    historyNumber.innerHTML = CURRENT_HISTORY_INDEX + 1;
 }
 
 function closeCurrentHistory() {
     main.item(0).style.backgroundSize = '150%';
-    main.item(0).style.transform = 'scale(1.2)';
-    main.item(0).style.opacity = '0';
+
+    currentCard.style.transform = 'scale(1.2)';
+
+    setTimeout(() => {
+        currentCard.children[0].style.transform = 'scaleY(0)';
+        currentCard.children[1].style.transform = 'scaleY(0)';
+        currentCard.children[2].style.transform = 'scaleY(0)';
+    }, 400)
+    
+    setTimeout(() => {
+        currentCard.style.zIndex = '5';
+
+        currentCard.children[0].style.transform = `scaleY(1)`;
+        currentCard.children[1].style.transform = `scaleY(1)`;
+        currentCard.children[2].style.transform = `scaleY(1)`;
+    }, 800)
 }
 
-function updateCardList() {
-    nextCards.children[0].style.width += '10vw';
-    nextCards.innerHTML += `
-        <a onclick='openHistory(${CURRENT_HISTORY_INDEX + 4}, ${(CURRENT_HISTORY_INDEX + 4) - 1})' style="background-image: url('${historyItems[CURRENT_HISTORY_INDEX + 4].image}')" class="card">
-            <h4>${historyItems[CURRENT_HISTORY_INDEX + 4].year}</h4>
-            <h1>${historyItems[CURRENT_HISTORY_INDEX + 4].title}</h1>
-        </a>
-    `;
-}
+openHistory(0);
