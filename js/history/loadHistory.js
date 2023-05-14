@@ -12,19 +12,18 @@ async function getHistory() {
         historyItems = data.items;
     });
 
-    loadHistoryInCards(0);
+    loadHistoryInCards();
 }
 
-function loadHistoryInCards(currentCard) {
+function loadHistoryInCards() {
     nextCards.innerHTML = '';
     
     for(var i = 0; i < historyItems.length; i++) {
-        if(i !== currentCard)
-            nextCards.innerHTML += `
-                <a onclick='openHistory(${i})' style="background-image: url('${historyItems[i].image}')" class="card">
-                    <h4>${historyItems[i].year}</h4>
-                    <h1>${historyItems[i].title}</h1>
-                </a>
-            `;
+        nextCards.innerHTML += `
+            <a onclick='openHistory(${i})' style="background-image: url('${historyItems[i].image}')" class="card">
+                <h4>${historyItems[i].year}</h4>
+                <h1>${historyItems[i].title}</h1>
+            </a>
+        `;
     }
 }

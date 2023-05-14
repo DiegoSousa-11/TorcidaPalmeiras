@@ -1,9 +1,8 @@
-var progress = document.querySelector('#progressBar .progress');
-
-var progressBarWidth = 0;
-
 var TIME_TO_NEXT_HISTORY = 5000;
 var TIME_TO_UPDATE_PROGRESS = 50;
+
+var progress = document.querySelector('#progressBar .progress');
+var progressBarWidth = 0;
 
 var intervalHistoryController = setInterval(() => {
     if(CURRENT_HISTORY_INDEX == historyItems.length - 1) {
@@ -24,11 +23,16 @@ function increaseProgress() {
 }
 
 function openHistory(historyIndex) {
+    if(historyIndex < 0) {
+        historyIndex = historyItems.length - 1;
+    } else if(historyIndex > historyItems.length - 1) {
+        historyIndex = 0;
+    }
+
     clearInterval(intervalHistoryController);
     progressBarWidth = 0;
 
-    if(historyIndex !== 0)    
-        closeCurrentHistory();
+    closeCurrentHistory();
 
     setTimeout(() => {
         main.item(0).style.backgroundImage = 'url(' + historyItems[historyIndex].image + ')';
@@ -39,10 +43,14 @@ function openHistory(historyIndex) {
         currentCard.style.transform = 'scale(1)';
         
         main.item(0).style.backgroundSize = '100%';
-        
-        setTimeout(() => {
-            loadHistoryInCards(historyIndex);
-        }, 200)
+
+        if(nextCards.querySelector('.selectedCard')) {
+            nextCards.querySelector('.selectedCard').classList.remove('selectedCard');
+        }
+    
+        nextCards.children[historyIndex].classList.add('selectedCard');
+
+        updateCardsList(historyIndex);
     }, 500);
 
     CURRENT_HISTORY_INDEX = historyIndex;
@@ -76,6 +84,16 @@ function closeCurrentHistory() {
         currentCard.children[1].style.transform = `scaleY(1)`;
         currentCard.children[2].style.transform = `scaleY(1)`;
     }, 800)
+}
+
+function updateCardsList(historyIndex) {
+    if(historyIndex !== historyItems.length) {
+        const cardWidth = (nextCards.children[historyIndex].clientWidth + 24) * historyIndex;
+
+        nextCards.style.marginLeft = `-${cardWidth}px`;
+    } else {
+        nextCards.style.marginLeft = `0`;
+    }
 }
 
 openHistory(0);

@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="./style.css">
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
-    <script src="../js/historySwipper/loadHistory.js" defer></script>
-    <script src="../js/historySwipper/nextHistory.js" defer></script>
+    <script src="../js/history/loadHistory.js" defer></script>
+    <script src="../js/history/nextHistory.js" defer></script>
     <title>Torcida Palmeiras | História</title>
 </head>
 <body>
@@ -38,11 +38,11 @@
                 </div>
     
                 <div class="controllers">
-                    <button class="moveLeft">
+                    <button onclick="openHistory(CURRENT_HISTORY_INDEX-1)" class="moveLeft">
                         <span class="iconify" data-icon="material-symbols:keyboard-arrow-left"></span>
                     </button>
                     
-                    <button class="moveRight">
+                    <button onclick="openHistory(CURRENT_HISTORY_INDEX+1)" class="moveRight">
                         <span class="iconify" data-icon="material-symbols:keyboard-arrow-right"></span>
                     </button>
     
