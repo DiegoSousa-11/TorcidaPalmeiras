@@ -139,11 +139,11 @@ main > img {
 .form .alerts p {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: .5rem;
 }
 
 .form .alerts .iconify {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .form form, .form form > div {
@@ -184,6 +184,11 @@ main > img {
     color: #9b9b9b;
 
     transition: .5s;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 35px #FFF inset;
+    -webkit-text-fill-color: var(--green) !important;
 }
 
 .formInput input {

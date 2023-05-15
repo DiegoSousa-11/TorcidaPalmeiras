@@ -9,6 +9,8 @@
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script src="../js/switchLoginAndRegister.js" defer></script>
     <script src="../js/inputStyle.js" defer></script>
+    <script src="../js/user/register.js" defer></script>
+    <script src="../js/user/login.js" defer></script>
     <title>Login e Cadastro | Torcida Palmeiras</title>
 </head>
 <body>
@@ -78,15 +80,15 @@
 
                         <div class="alerts"></div>
     
-                        <button>Cadastrar-se</button>
+                        <button onclick="register()">Cadastrar-se</button>
                     </form>
                 </div>
     
-                <div id="signInForm" class="form disabledForm" name="signInForm">
+                <div id="signInForm" class="form disabledForm">
                     <h2>Bem vindo de volta!</h2>
                     <p>Bem vindo de volta, insira seus dados e efetue o seu login!</p>
     
-                    <form action="">
+                    <form action="" name="signInForm">
                         <div>
                             <label>Email</label>
                             <div class="formInput">
@@ -105,7 +107,7 @@
 
                         <div class="alerts"></div>
     
-                        <button>Entrar</button>
+                        <button onclick="login()">Entrar</button>
                     </form>
                 </div>
             </div>

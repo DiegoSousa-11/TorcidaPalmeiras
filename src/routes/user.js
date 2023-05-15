@@ -6,3 +6,9 @@ var userController = require('../controllers/userController');
 router.post('/register', (req, res) => {
     userController.register(req, res);
 });
+
+router.post('/authenticate', (req, res) => {
+    userController.login(req, res);
+});
+
+module.exports = router;

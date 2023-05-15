@@ -19,14 +19,14 @@ var sqlServerConfig = {
 
 //MYSQL WORKBENCH (LOCAL)
 var mySqlConfig = {
-    host: "SEU_SERVIDOR",
-    database: "SEU_BANCO_DE_DADOS",
-    user: "SEU_USUARIO",
-    password: "SUA_SENHA",
+    host: "localhost",
+    database: "TorcidaPalmeiras",
+    user: "root",
+    password: "admin",
 };
 
 function execute(query) {
-    if(process.env.ENVIRONMENT === 'PRODUCTION') {
+    if(process.env.ENVIRONMENT_PROCESS === 'PRODUCTION') {
         return new Promise((resolve, reject) => {
             sql.connect(sqlServerConfig).then(() => {
                 return sql.query(query);
@@ -42,9 +42,9 @@ function execute(query) {
                 return ('Error at sql server (Azure): ', error);
             })
         })
-    } else if(process.env.ENVIRONMENT === 'DEVELOPMENT') {
+    } else if(process.env.ENVIRONMENT_PROCESS === 'DEVELOPMENT') {
         return new Promise((resolve, reject) => {
-            var connection = mysql.createConnection(mySqlConfig);
+            const connection = mysql.createConnection(mySqlConfig);
             
             connection.connect();
             connection.query(query, (error, results) => {
@@ -68,4 +68,8 @@ function execute(query) {
             reject('The environment is not defined at app.js');
         });
     }
+}
+
+module.exports = {
+    execute
 }

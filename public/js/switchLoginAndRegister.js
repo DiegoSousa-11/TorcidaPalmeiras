@@ -34,3 +34,6 @@ function switchScreen() {
 function removeForm(form) {
     form.style.display = 'none';
 }
+
+signUpForm.addEventListener('submit', (event) => event.preventDefault());
+signInForm.addEventListener('submit', (event) => event.preventDefault());

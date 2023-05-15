@@ -8,7 +8,7 @@ const API_KEY = 'AIzaSyBwKy7x_dM10MUxsQ7kQirIqN0HhnHdYyk';
 const SEARCH_ENGINE = '057530d35dc9a43f6';
 
 const url = `https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${SEARCH_ENGINE}&q=${SEARCH_KEY}&sort=date`;
-const mock = 'http://127.0.0.1:5500/js/newsMock.json'; //Utilizado para não ultrapassar o limite de requisições da API
+const mock = 'js/newsMock.json'; //Utilizado para não ultrapassar o limite de requisições da API
 
 const newsCarousel = document.querySelector('#news .newsCarousel');
 const controllersContainer = document.querySelector('#news .pageControllerContainer');
