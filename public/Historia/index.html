@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="../js/history/loadHistory.js" defer></script>
+    <script src="../js/history/nextHistory.js" defer></script>
+    <title>Torcida Palmeiras | História</title>
+</head>
+<body>
+    <header>
+        <img src="../assets/img/logoPalmeiras.svg" alt="logoPalmeiras">
+        <nav>
+            <a href="">Home</a>
+            <a href="">Notícias</a>
+            <a href="">História</a>
+            <a href="">Jogos</a>
+        </nav>
+        
+        <button>Login</button>
+    </header>
+    
+    <main>
+        <section id="currentHistoryCard" class="currentCard">
+            <h4></h4>
+            <h1></h1>
+            <p></p>
+        </section>
+
+        <section class="sectionCards">
+            <div id="nextCards" class="nextCards">
+                <div class="cardsContainer">
+                    
+                </div>
+    
+                <div class="controllers">
+                    <button onclick="openHistory(CURRENT_HISTORY_INDEX-1)" class="moveLeft">
+                        <span class="iconify" data-icon="material-symbols:keyboard-arrow-left"></span>
+                    </button>
+                    
+                    <button onclick="openHistory(CURRENT_HISTORY_INDEX+1)" class="moveRight">
+                        <span class="iconify" data-icon="material-symbols:keyboard-arrow-right"></span>
+                    </button>
+    
+                    <div id="progressBar" class="progressBar">
+                        <div class="progress"></div>
+                    </div>
+    
+                    <h1 id="historyNumber">1</h1>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+var express = require("express");
+var router = express.Router();
+
+var matchesController = require('../controllers/matchesController');
+
+router.get('/lastMatches', (req, res) => {
+    matchesController.listLastMatches(req, res);
+});
+
+router.get('/nextMatch', (req, res) => {
+    matchesController.getNextMatch(req, res);
+});
+
+module.exports = router;

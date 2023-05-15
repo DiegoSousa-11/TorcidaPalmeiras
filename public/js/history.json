@@ -1,0 +1,40 @@
+{
+    "items": [
+        {
+            "year": "1914",
+            "title": "Fundação do Palestra Italia",
+            "text": "A Sociedade Esportiva Palmeiras foi fundada em 26 de agosto de 1914 por imigrantes italianos em São Paulo. O clube foi criado para representar a comunidade italiana e competir com as grandes equipes da época. Antes de sua primeira partida oficial em 1915, o time passou por meses de treinamento e avaliações para selecionar os melhores jogadores. O Palestra Italia, como era chamado na época, superou dificuldades durante a Primeira Guerra Mundial, quando perdeu membros para o conflito. O primeiro jogo oficial do clube aconteceu em 24 de janeiro de 1915 contra o Savóia, com vitória do Palestra por 2 a 0. Desde então, o Palmeiras se tornou um dos clubes mais importantes e vitoriosos do futebol brasileiro.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Palestra_Italia_1920.jpg"
+        },
+        {
+            "year": "1922",
+            "title": "Estreia internacional",
+            "text": "Cada vez mais consolidado entre os principais times da cidade, o Palestra Italia disputou sua primeira partida internacional em outubro de 1922, com vitória por 4 a 1 sobre a Seleção Paraguaia (então vice-campeã sul-americana), em amistoso realizado na Chácara da Floresta e válido pela simbólica Taça Guarani.",
+            "image": "https://historiadofutebol.com/blog/wp-content/uploads/2015/11/palestra-x-paraguai-1922.png"
+        },
+        {
+            "year": "1927",
+            "title": "Bicampeonato paulista",
+            "text": "Além disso, o clube comemorou pela primeira vez um bicampeonato paulista, em 1926 (título invicto) e 1927, faturou uma edição extra do Paulistão, em 1926 (de novo invicto), e, no mesmo ano, conquistou a Copa dos Campeões Estaduais Rio-São Paulo, o primeiro título interestadual da extensa galeria de conquistas palestrinas.",
+            "image": "https://1.bp.blogspot.com/-DqRKNtc3cfQ/W-lf9BauEPI/AAAAAAAAT0k/nqbwVgoV4L0H8XWx_dsgloAtIdm9vguNwCLcBGAs/s1600/riosp1933-poster.jpg"
+        },
+        {
+            "year": "1932-1933",
+            "title": "Goleando rivais",
+            "text": "A década foi marcada ainda por goleadas impiedosas nos adversários, que seguem até hoje como as maiores de todos os tempos. Em 1932, o time comandado por Humberto Cabelli fez 8 a 0 no Santos, gols de Romeu Pellicciari (2), Imparato (2), Lara, Sandro, Avelino e Goliardo, e garantiu o título com 100% de aproveitamento – até hoje, nunca nenhum clube repetiu esse feito. Em 1933 (primeiro ano de futebol profissional no Brasil), foi a vez de o Corinthians ser massacrado por 8 a 0, gols de Romeu Pellicciari (4), Imparato (3) e Gabardo.",
+            "image": "https://cdn2.picryl.com/photo/1933/12/31/time-do-palestra-italia-palmeiras-1933-89742e-1024.jpg"
+        },
+        {
+            "year": "1933",
+            "title": "Primerira grande reforma",
+            "text": "No mesmo ano de 1933, o Parque Antártica viveu sua primeira grande reforma e se tornou o estádio mais moderno do país na época: a arquibancada geral, que era de madeira, passou a ser de concreto armado; além disso, uma tribuna social foi erguida para os associados do clube. Rebatizado para “Stadium Palestra Italia”, a casa alviverde foi reestreada no dia 13 de agosto daquele ano com uma importante vitória por 6 a 0 sobre o Bangu, em confronto válido pelo Torneio Rio-São Paulo. Neste mesmo período, a sede social do clube foi transferida do centro da cidade para o entorno do estádio.",
+            "image": "https://sep-bucket-prod.s3.amazonaws.com/wp-content/uploads/2021/01/04093120/palestra-italia-publico-2.jpeg"
+        },
+        {
+            "year": "1930 - 1940",
+            "title": "Tricampeonato paulista",
+            "text": "O Palestra Italia colecionou títulos importantes ao longo da década de 30. Além de comemorar seu primeiro (e até hoje único) tricampeonato paulista, em 1932, 1933 e 1934, levou os troféus estaduais de 1936 e 1940, sagrou-se campeão da segunda e última edição do Campeonato Paulista Extra, em 1938 (já havia levado a taça na primeira edição, em 1926), e conquistou o primeiro Torneio Rio-São Paulo da história, em 1933.",
+            "image": "https://cdn.espn.com.br/image/especiais/palmeirasxcorinthians-100anos/palmeiras3.jpg"
+        }
+    ]
+}
