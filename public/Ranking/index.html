@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="../js/ranking/loadCharts.js" defer></script>
+    <title>Ranking | Torcida Palmeiras</title>
+</head>
+<body>
+    <header>
+        <img src="../assets/img/logoPalmeiras.svg" alt="logoPalmeiras">
+        <nav>
+            <a href="">Home</a>
+            <a href="">Notícias</a>
+            <a href="">História</a>
+            <a href="">Jogos</a>
+        </nav>
+
+        <button>Login</button>
+    </header>
+
+    <main>
+        <section>
+            <h1>Meu desempenho</h1>
+            
+            <div class="container">
+                <div class="assertivenessRate">
+                    <h2>Taxa de assertividade</h2>
+
+                    <div class="assertivenessGraphic">
+                        <canvas id="assertivenessChartCanvas"></canvas>
+                    </div>
+
+                    <div class="graphicCaption">
+                        <div class="rightGuesses">
+                            <div>
+                                <strong>Palpites certos</strong>
+                            </div>
+
+                            <strong>70%</strong>
+                        </div>
+
+                        <hr>
+
+                        <div class="wrongGuesses">
+                            <div>
+                                <strong>Palpites incorretos</strong>
+                            </div>
+
+                            <strong>30%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lastGuesses">
+                    <h2>Últimos palpites</h2>
+
+                    <div class="lastGuessesContainer">
+                        <div class="guess">
+                            <div class="header">
+                                <p>Brasileirão</p>
+                                <p>10/05 • 21:30</p>
+                            </div>
+
+                            <div class="teams">
+                                <div class="teamContainer">
+                                    <div class="team">
+                                        <img src="../assets/img/logoPalmeiras.svg" alt="">
+                                        <h3>Palmeiras</h3>
+                                    </div>
+                                    <h3>2</h3>
+                                </div>
+    
+                                <div class="teamContainer">
+                                    <div class="team">
+                                        <img src="https://logodownload.org/wp-content/uploads/2017/02/gremio-logo-escudo.png" alt="">
+                                        <h3>Grêmio</h3>
+                                    </div>
+                                    <h3>0</h3>
+                                </div>
+                            </div>
+
+                            <div class="footer">
+                                <hr>
+                                <div class="guessStatus">
+                                    <span class="iconify" data-icon="iconamoon:close-bold"></span>
+                                    Incorreto
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+
+        <section>
+            <h1>Desempenho da torcida</h1>
+            
+            <div class="container">
+                <div class="assertivenessRate">
+                    <h2>Taxa de assertividade da torcida</h2>
+
+                    <div class="assertivenessGraphic">
+                        <canvas id="crowdAssertivenessChartCanvas"></canvas>
+                    </div>
+
+                    <div class="graphicCaption">
+                        <div class="rightGuesses">
+                            <div>
+                                <strong>Palpites certos</strong>
+                            </div>
+
+                            <strong>60%</strong>
+                        </div>
+
+                        <hr>
+
+                        <div class="wrongGuesses">
+                            <div>
+                                <strong>Palpites incorretos</strong>
+                            </div>
+
+                            <strong>40%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="usersRanking">
+                    <h2>Usuários que mais acertaram palpites</h2>
+
+                    <div class="ranking">
+                        <canvas id="rankingUsersChartCanvas"></canvas>
+                    </div>
+                </div>    
+            </div>
+        </section>
+    </main>
+</body>
+</html>

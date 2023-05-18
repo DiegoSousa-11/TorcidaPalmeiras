@@ -1,0 +1,182 @@
+section h1 {
+    color: var(--darkGreen);
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+}
+
+section {
+    flex: 1;
+
+    padding: 2.5rem 5rem;
+}
+
+section .container {
+    display: flex;
+
+    width: 100%;
+}
+
+.container .assertivenessRate {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 25%;
+    padding: 2rem;
+
+    background-color: var(--lightGreen);
+    border-radius: 15px;
+}
+
+.container > div {
+    color: #FFF;
+    font-size: 1.2rem;
+}
+
+.assertivenessRate .graphicCaption {
+    display: flex;
+    flex-direction: column;
+
+    gap: .5rem;
+
+    font-size: 1.2rem;
+}
+
+.assertivenessRate .assertivenessGraphic {
+    width: 50%;
+    margin: 2rem auto;
+}
+
+.assertivenessRate .graphicCaption > div > div {
+    display: flex;
+    align-items: center;
+
+    gap: .5rem;
+}
+
+.assertivenessRate .graphicCaption > .rightGuesses > div::before {
+    background-color: #FFF;
+}
+
+.assertivenessRate .graphicCaption > div > div::before {
+    content: '';
+
+    width: 1rem;
+    height: 1rem;
+
+    background-color: var(--green);
+    border-radius: 5px;
+}
+
+.assertivenessRate .graphicCaption > div {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.container .lastGuesses, .container .usersRanking {
+    flex: 1;
+
+    margin-left: 2rem;
+    padding: 2rem;
+
+    background-color: var(--lightGreen);
+    border-radius: 15px;
+}
+
+.lastGuessesContainer {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1rem;
+}
+
+.lastGuesses h2 {
+    margin-bottom: 1rem;
+}
+
+.lastGuesses .guess {
+    width: 32%;
+
+    background-color: #FFF;
+    color: #292929;
+    border-radius: 10px;
+
+    font-size: 1rem;
+}
+
+.guess .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem 0 1.5rem;
+
+    font-weight: 500;
+}
+
+.guess .teams {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: .5rem 1.5rem;
+}
+
+.guess .teamContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.guess .teamContainer .team {
+    display: flex;
+    align-items: center;
+
+    gap: .8rem;
+}
+
+.team img {
+    height: 2.5rem;
+}
+
+.guess .footer {
+    margin-top: .5rem;
+}
+
+.footer hr {
+    border: none;
+    border-top: 2px solid #29292920;
+    margin: 0;
+    clear: both;
+}
+
+.guess .footer .guessStatus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-block: .6rem;
+
+    gap: .2rem;
+
+    color: #E7584F;
+    font-weight: 600;
+}
+
+.guessStatus .iconify {
+    font-size: 1.5rem;
+}
+
+.usersRanking {
+    display: flex;
+    flex-direction: column;
+}
+
+.usersRanking .ranking {
+    height: 80%;
+    width: 60%;
+
+    margin-inline: auto;
+    margin-top: auto;
+}
