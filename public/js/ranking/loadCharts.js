@@ -32,12 +32,12 @@ const assertivenessChart = new Chart(assertivenessChartCanvas, {
         {
             beforeDatasetsDraw(chart) {
                 const ctx = chart.ctx;
-
+                
                 const canvasCenterCoords = {
-                    x: ctx.canvas.width/2,
-                    y: (ctx.canvas.height/2) + 3
+                    x: ctx.canvas.clientHeight/2,
+                    y: (ctx.canvas.clientWidth/2) + 3
                 }
-    
+
                 ctx.save();
 
                 ctx.font = '800 2.2rem Poppins';
@@ -86,8 +86,8 @@ const crowdAssertivenessChart = new Chart(crowdAssertivenessChartCanvas, {
                 const ctx = chart.ctx;
 
                 const canvasCenterCoords = {
-                    x: ctx.canvas.width/2,
-                    y: (ctx.canvas.height/2) + 3
+                    x: ctx.canvas.clientHeight/2,
+                    y: (ctx.canvas.clientWidth/2) + 3
                 }
     
                 ctx.save();

@@ -88,7 +88,7 @@ async function getNextMatch() {
 }
 
 function verifyPrediction() {
-    fetch('/guess/lastPrediction', {
+    fetch(`/user/${sessionStorage.USER_ID}/lastPrediction`, {
         method: 'GET',
         headers: {
             "Content-Type": "application/json"
@@ -104,7 +104,14 @@ function verifyPrediction() {
             document.getElementById('homeGoals').disabled = true;
             document.getElementById('awayGoals').disabled = true;
 
-            ;
+            document.querySelector('#matches .rightContent').querySelector('button').remove()
+
+            document.querySelector('#matches .alerts').innerHTML = `
+                <p style='color: var(--green)'>
+                    <span class="iconify" data-icon="ic:round-check"></span>
+                    Você já efetuou seu palpite para esse jogo!
+                </p>
+            `;
         }
     })
 }

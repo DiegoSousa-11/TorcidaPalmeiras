@@ -12,7 +12,7 @@ function createPrediction() {
         return alert('É necessário estar logado no nosso sistema para palpitar!');
     }
 
-    fetch('/guess/createPrediction', {
+    fetch(`/user/${userID}/createPrediction`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
@@ -24,8 +24,8 @@ function createPrediction() {
             awayTeamLogo: nextMatch.awayTeam.crest,
             homeGoals: predictionHome,
             awayGoals: predictionAway,
-            matchDate: nextMatch.utcDate,
-            idUser: userID
+            competition: nextMatch.competition.name,
+            matchDate: nextMatch.utcDate
         })
     }).then((result) => {
         console.log(result);

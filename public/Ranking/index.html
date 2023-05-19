@@ -9,11 +9,13 @@
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <script src="../js/ranking/loadCharts.js" defer></script>
+    <script src="../js/validateSession.js" defer></script>
+    <script src="../js/ranking/loadPredictions.js" defer></script>
     <title>Ranking | Torcida Palmeiras</title>
 </head>
-<body onload="verifySession()">
+<body onload="{verifySession(); getLastPredictions()}">
     <header>
-        <img src="./assets/img/logoPalmeiras.svg" alt="logoPalmeiras">
+        <img src="../assets/img/logoPalmeiras.svg" alt="logoPalmeiras">
         <nav>
             <a href="">Home</a>
             <a href="">Notícias</a>
@@ -58,7 +60,7 @@
                 <div class="lastGuesses">
                     <h2>Últimos palpites</h2>
 
-                    <div class="lastGuessesContainer">
+                    <div id="lastGuessesContainer" class="lastGuessesContainer">
                         <div class="guess">
                             <div class="header">
                                 <p>Brasileirão</p>

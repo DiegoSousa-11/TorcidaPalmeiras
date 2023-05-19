@@ -21,6 +21,7 @@ CREATE TABLE Guess (
     awayGoals VARCHAR(45),
     guessIsRight TINYINT,
     fkUser INT,
+    competition VARCHAR(200),
     CONSTRAINT fkUser FOREIGN KEY (fkUser) REFERENCES User(idUser)
 );
 
@@ -42,3 +43,5 @@ CONSTRAINT fkNews FOREIGN KEY (fkNews) REFERENCES News(idNews),
 CONSTRAINT fkUserLike FOREIGN KEY (fkUser) REFERENCES User(idUser),
 CONSTRAINT pkComposed PRIMARY KEY (fkNews, fkUser)
 );
+
+SELECT * FROM Guess WHERE fkUser = 1 ORDER BY idGuess DESC LIMIT 1;

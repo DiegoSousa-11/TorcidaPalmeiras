@@ -12,7 +12,6 @@ var app = express();
 var indexRouter = require('./src/routes/index');
 var matchRouter = require('./src/routes/match');
 var userRouter = require('./src/routes/user');
-var guessRouter = require('./src/routes/guess');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -30,7 +29,6 @@ app.use((req, res, next) => {
 
 app.use('/', indexRouter);
 app.use("/match", matchRouter);
-app.use("/guess", guessRouter);
 app.use("/user", userRouter);
 
 app.listen(PORT, () => console.log(`Server is running at: http://localhost:${PORT}! 
