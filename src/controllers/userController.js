@@ -19,7 +19,7 @@ function login(req, res) {
     const { email, password } = req.body;
 
     if(!email || !password) {
-        res.status(400).send('Preencha todos os dados');
+        res.status(400).send('Alguns dados estão vazios');
     } else {
         userModel.login(email, password).then((result) => {
             res.json(result);

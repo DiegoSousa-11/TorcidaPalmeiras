@@ -10,8 +10,9 @@ var PORT = process.env.ENVIRONMENT_PROCESS === 'DEVELOPMENT' ? 3333 : 8000;
 var app = express();
 
 var indexRouter = require('./src/routes/index');
-var matchesRouter = require('./src/routes/matches');
+var matchRouter = require('./src/routes/match');
 var userRouter = require('./src/routes/user');
+var guessRouter = require('./src/routes/guess');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -28,7 +29,8 @@ app.use((req, res, next) => {
 });
 
 app.use('/', indexRouter);
-app.use("/matches", matchesRouter);
+app.use("/match", matchRouter);
+app.use("/guess", guessRouter);
 app.use("/user", userRouter);
 
 app.listen(PORT, () => console.log(`Server is running at: http://localhost:${PORT}! 

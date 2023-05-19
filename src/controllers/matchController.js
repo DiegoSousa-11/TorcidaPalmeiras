@@ -1,5 +1,6 @@
 const axios = require('axios');
 const API_KEY_FOOTBALL = '1e4d938cb1f04831a6d062265501e775';
+const matchModel = require('../models/guessModel');
 
 async function listLastMatches(req, res) {
     const limit = req.query.limit ? req.query.limit : 4;
@@ -41,7 +42,31 @@ async function getNextMatch(req, res) {
     }
 }
 
+function createPrediction(req, res) {
+    const { 
+        homeTeam, 
+        homeTeamLogo, 
+        awayTeam, 
+        awayTeamLogo, 
+        homeGoals, 
+        awayGoals, 
+        idUser 
+    } = req.body;
+
+    if(!homeTeam || !homeTeamLogo || !awayTeam || !awayTeamLogo || !homeGoals || !awayGoals || !idUser) {
+        res.status(400).send('Alguns dados estão vazios');
+    } else {
+        matchModel.createPrediction(homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, idUser).then((result) => {
+            res.json(result);
+        }).catch((error) => {
+            console.log(error);
+            res.status(500).json(error.sqlMessage)
+        });
+    }
+}
+
 module.exports = {
     listLastMatches,
-    getNextMatch
+    getNextMatch,
+    createPrediction
 }

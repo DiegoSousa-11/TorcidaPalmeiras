@@ -12,14 +12,19 @@ CREATE TABLE User (
 
 CREATE TABLE Guess (
 	idGuess INT PRIMARY KEY AUTO_INCREMENT,
+    matchDate VARCHAR(45),
 	homeTeam VARCHAR(45),
+    homeTeamLogo VARCHAR(255),
     awayTeam VARCHAR(45),
+	awayTeamLogo VARCHAR(255),
     homeGoals VARCHAR(45),
     awayGoals VARCHAR(45),
     guessIsRight TINYINT,
     fkUser INT,
     CONSTRAINT fkUser FOREIGN KEY (fkUser) REFERENCES User(idUser)
 );
+
+SELECT * FROM Guess;
 
 CREATE TABLE News (
 idNews INT PRIMARY KEY AUTO_INCREMENT,

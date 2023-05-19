@@ -20,6 +20,7 @@ function register() {
             
             if(result.ok) {
                 alert('Usuário cadastrado com sucesso');
+                switchScreen();
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!")
             }

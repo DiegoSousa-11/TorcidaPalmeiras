@@ -4,8 +4,10 @@ const AMOUNT_MATCHES = 4;
 var lastMatchesContainer = document.querySelector('#matches .lastMatches');
 var nextMatchContainer = document.querySelector('#matches .nextMatch');
 
+var nextMatch = {};
+
 async function getLastMatches() {
-    const request = `http://localhost:3333/matches/lastMatches?limit=${AMOUNT_MATCHES}`;
+    const request = `http://localhost:3333/match/lastMatches?limit=${AMOUNT_MATCHES}`;
 
     await fetch(request).then((response) => response.json()).then((data) => {
         var matches = data.matches;
@@ -42,10 +44,11 @@ async function getLastMatches() {
 }
 
 async function getNextMatch() {
-    const request = `http://localhost:3333/matches/nextMatch`;
+    const request = `http://localhost:3333/match/nextMatch`;
 
     await fetch(request).then((response) => response.json()).then((data) => {
         var match = data.matches[0];
+        nextMatch = match;
 
         var hour = new Date(match.utcDate).getHours();
         var minutes = new Date(match.utcDate).getMinutes() <= 9 ? '0' + new Date(match.utcDate).getMinutes() : new Date(match.utcDate).getMinutes();
@@ -63,13 +66,13 @@ async function getNextMatch() {
                     </div>
                     
                     <div class="scoreboard">
-                        <input maxlength="1" type="text">
+                        <input id='homeGoals' maxlength="1" type="text">
 
                         <div class="timetable">
                             <h3>${hour}h${minutes}</h3>
                         </div>
 
-                        <input maxlength="1" type="text">
+                        <input id='awayGoals' maxlength="1" type="text">
                     </div>
 
                     <div class="teamScore">
@@ -81,7 +84,29 @@ async function getNextMatch() {
                 </div>
             </div>
         `;
-    }).catch((error) => console.log(error))
+    }).then(() => verifyPrediction()).catch((error) => console.log(error))
+}
+
+function verifyPrediction() {
+    fetch('/guess/lastPrediction', {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json"
+        },
+    }).then((response) => response.json()).then((data) => {
+        if(data.length === 0)
+            return;
+
+        if(nextMatch.utcDate == data[0].matchDate) {
+            document.getElementById('homeGoals').value = data[0].homeGoals;
+            document.getElementById('awayGoals').value = data[0].awayGoals;
+
+            document.getElementById('homeGoals').disabled = true;
+            document.getElementById('awayGoals').disabled = true;
+
+            ;
+        }
+    })
 }
 
 getLastMatches();

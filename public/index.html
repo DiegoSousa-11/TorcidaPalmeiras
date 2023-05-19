@@ -8,10 +8,12 @@
     <script src="./js/NewsCarousel/news.js" defer></script>
     <script src="./js/NewsCarousel/newsCarousel.js" defer></script>
     <script src="./js/matches/loadMatches.js" defer></script>
+    <script src="./js/validateSession.js" defer></script>
+    <script src="./js/matches/createPrediction.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>Torcida Palmeiras</title>
 </head>
-<body>
+<body onload="verifySession()">
     <header>
         <img src="./assets/img/logoPalmeiras.svg" alt="logoPalmeiras">
         <nav>
@@ -20,8 +22,6 @@
             <a href="">História</a>
             <a href="">Jogos</a>
         </nav>
-
-        <button>Login</button>
     </header>
     
     <main>
@@ -92,7 +92,7 @@
                             
                         </div>
 
-                        <button>Palpitar</button>
+                        <button onclick="createPrediction()">Palpitar</button>
                     </div>
                 </div>
             </div>
