@@ -31,7 +31,7 @@ function createPrediction() {
         console.log(result);
         
         if(result.ok) {
-            alert('Palpite criado com sucesso!');
+            hiddenPredictionOption();
         } else {
             throw ("Houve um erro ao tentar realizar o palpite!")
         }

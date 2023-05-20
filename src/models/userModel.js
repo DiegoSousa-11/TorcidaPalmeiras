@@ -25,8 +25,15 @@ function getLastPrediction(idUser) {
     return database.execute(query);
 }
 
-function getLastSixPredicitons(idUser) {
+function getLastSixPredictions(idUser) {
     const query = `SELECT * FROM Guess WHERE fkUser = 1 ORDER BY idGuess DESC LIMIT 6`;
+
+    return database.execute(query);
+}
+
+function getAssertivenessRate(idUser) {
+    const query = `SELECT (SELECT COUNT(guessIsRight) FROM Guess WHERE fkUser = ${idUser} AND guessIsRight = TRUE) AS rightGuesses, 
+    (SELECT COUNT(guessIsRight) FROM Guess WHERE fkUser = ${idUser} AND guessIsRight = FALSE) AS wrongGuesses;`;
 
     return database.execute(query);
 }
@@ -36,5 +43,6 @@ module.exports = {
     login,
     createPrediction,
     getLastPrediction,
-    getLastSixPredicitons
+    getLastSixPredictions,
+    getAssertivenessRate
 }

@@ -6,7 +6,7 @@ var assertivenessChartData = {
     labels: ['Palpites incorretos', 'Palpites certos'],
     datasets: [{
         label: 'Quantidade',
-        data: [5, 15],
+        data: [],
         backgroundColor: [
           '#FFF',
           '#0B3822',
@@ -32,6 +32,15 @@ const assertivenessChart = new Chart(assertivenessChartCanvas, {
         {
             beforeDatasetsDraw(chart) {
                 const ctx = chart.ctx;
+
+                const wrongGuesses = chart.data.datasets[0].data[0];
+                const rightGuesses = chart.data.datasets[0].data[1];
+
+                var rightGuessesPercentage = (rightGuesses * 100)/(wrongGuesses + rightGuesses);
+
+                if(!rightGuessesPercentage) {
+                    rightGuessesPercentage = 0;
+                }
                 
                 const canvasCenterCoords = {
                     x: ctx.canvas.clientHeight/2,
@@ -46,13 +55,31 @@ const assertivenessChart = new Chart(assertivenessChartCanvas, {
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
     
-                const text = '70%';
+                const text = `${rightGuessesPercentage}%`;
     
                 ctx.fillText(text, canvasCenterCoords.x, canvasCenterCoords.y);
             }
         }
     ]
 });
+
+function updateAssertivenessChart(assertivenessRateData) {
+    const rightGuessesPercentageText = document.getElementById('rightGuessesPercentage');
+    const wrongGuessesPercentageText = document.getElementById('wrongGuessesPercentage');
+
+    assertivenessChart.data.datasets[0].data = assertivenessRateData;
+
+    const wrongGuesses = assertivenessRateData[0];
+    const rightGuesses = assertivenessRateData[1];
+
+    const rightGuessesPercentage = (rightGuesses * 100)/(wrongGuesses + rightGuesses);
+    const wrongGuessesPercentage = 100 - rightGuessesPercentage;
+
+    rightGuessesPercentageText.innerHTML = rightGuessesPercentage + '%';
+    wrongGuessesPercentageText.innerHTML = wrongGuessesPercentage + '%';
+
+    assertivenessChart.update();
+}
 
 var crowdAssertivenessChartData = {
     labels: ['Palpites incorretos', 'Palpites certos'],
@@ -164,3 +191,5 @@ const rankingUsersChart = new Chart(rankingUsersChartCanvas, {
         }
     },
 });
+
+loadUserAssertivenessRate();

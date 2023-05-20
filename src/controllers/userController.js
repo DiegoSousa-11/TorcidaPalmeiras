@@ -67,14 +67,25 @@ function getLastPrediction(req, res) {
     });
 }
 
-function getLastSixPredicitons(req, res) {
+function getLastSixPredictions(req, res) {
     const { idUser } = req.params;
 
-    userModel.getLastPrediction(idUser).then((result) => {
+    userModel.getLastSixPredictions(idUser).then((result) => {
         res.json(result);
     }).catch((error) => {
         console.log(error);
         res.status(500).json(error.sqlMessage)
+    });
+}
+
+function getAssertivenessRate(req, res) {
+    const { idUser } = req.params;
+
+    userModel.getAssertivenessRate(idUser).then((result) => {
+        res.json(result);
+    }).catch((error) => {
+        console.log(error);
+        res.status(500).json(error.sqlMessage);
     });
 }
 
@@ -83,5 +94,6 @@ module.exports = {
     login,
     createPrediction,
     getLastPrediction,
-    getLastSixPredicitons
+    getLastSixPredictions,
+    getAssertivenessRate
 }

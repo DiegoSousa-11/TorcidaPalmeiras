@@ -20,7 +20,11 @@ router.get('/:idUser/lastPrediction', (req, res) => {
 });
 
 router.get('/:idUser/lastPredictions', (req, res) => {
-    userController.getLastSixPredicitons(req, res);
+    userController.getLastSixPredictions(req, res);
+});
+
+router.get('/:idUser/assertivenessRate', (req, res) => {
+    userController.getAssertivenessRate(req, res);
 });
 
 module.exports = router;

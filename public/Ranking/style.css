@@ -8,7 +8,7 @@ section h1 {
 section {
     flex: 1;
 
-    padding: 2.5rem 5rem;
+    padding: 2.5rem 3rem;
 }
 
 section .container {
@@ -22,7 +22,7 @@ section .container {
     flex-direction: column;
     justify-content: space-between;
 
-    width: 25%;
+    width: 22%;
     padding: 2rem;
 
     background-color: var(--lightGreen);
@@ -104,15 +104,19 @@ section .container {
     color: #292929;
     border-radius: 10px;
 
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 .guess .header {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1.5rem 0 1.5rem;
+    padding: 1.2rem 1.5rem 0 1.5rem;
 
     font-weight: 500;
+}
+
+.guess .header p {
+    color: var(--lightGreen);
 }
 
 .guess .teams {
@@ -120,7 +124,7 @@ section .container {
     flex-direction: column;
     gap: 1rem;
 
-    padding: .5rem 1.5rem;
+    padding: 1rem 1.5rem;
 }
 
 .guess .teamContainer {
@@ -156,11 +160,10 @@ section .container {
     justify-content: center;
     align-items: center;
 
-    padding-block: .6rem;
+    padding-block: .8rem;
 
     gap: .2rem;
 
-    color: #E7584F;
     font-weight: 600;
 }
 

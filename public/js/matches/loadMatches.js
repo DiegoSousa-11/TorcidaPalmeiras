@@ -101,19 +101,21 @@ function verifyPrediction() {
             document.getElementById('homeGoals').value = data[0].homeGoals;
             document.getElementById('awayGoals').value = data[0].awayGoals;
 
-            document.getElementById('homeGoals').disabled = true;
-            document.getElementById('awayGoals').disabled = true;
-
-            document.querySelector('#matches .rightContent').querySelector('button').remove()
-
-            document.querySelector('#matches .alerts').innerHTML = `
-                <p style='color: var(--green)'>
-                    <span class="iconify" data-icon="ic:round-check"></span>
-                    Você já efetuou seu palpite para esse jogo!
-                </p>
-            `;
+            hiddenPredictionOption();
         }
     })
+}
+
+function hiddenPredictionOption() {
+    document.getElementById('homeGoals').disabled = true;
+    document.getElementById('awayGoals').disabled = true;
+    document.querySelector('#matches .rightContent').querySelector('button').remove()
+    document.querySelector('#matches .alerts').innerHTML = `
+        <p style='color: var(--green)'>
+            <span class="iconify" data-icon="ic:round-check"></span>
+            Você já efetuou seu palpite para esse jogo!
+        </p>
+    `;
 }
 
 getLastMatches();
