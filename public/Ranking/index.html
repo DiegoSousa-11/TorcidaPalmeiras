@@ -14,7 +14,7 @@
     <script src="../js/ranking/loadPredictions.js" defer></script>
     <title>Ranking | Torcida Palmeiras</title>
 </head>
-<body onload="{verifySession(); getLastPredictions()}">
+<body onload="verifySession()">
     <header>
         <img src="../assets/img/logoPalmeiras.svg" alt="logoPalmeiras">
         <nav>
@@ -43,7 +43,7 @@
                                 <strong>Palpites certos</strong>
                             </div>
 
-                            <strong id="rightGuessesPercentage">70%</strong>
+                            <strong id="userRightGuessesPercentage">70%</strong>
                         </div>
 
                         <hr>
@@ -53,7 +53,7 @@
                                 <strong>Palpites incorretos</strong>
                             </div>
 
-                            <strong id="wrongGuessesPercentage">30%</strong>
+                            <strong id="userWrongGuessesPercentage">30%</strong>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                                 <strong>Palpites certos</strong>
                             </div>
 
-                            <strong>60%</strong>
+                            <strong id="crowdRightGuessesPercentage">60%</strong>
                         </div>
 
                         <hr>
@@ -95,7 +95,7 @@
                                 <strong>Palpites incorretos</strong>
                             </div>
 
-                            <strong>40%</strong>
+                            <strong id="crowdWrongGuessesPercentage">40%</strong>
                         </div>
                     </div>
                 </div>

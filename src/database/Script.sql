@@ -36,7 +36,14 @@ VALUES
     ('2023-05-05 21:00:00', 'Palmeiras', 'https://crests.football-data.org/1769.png', 'Internacional', 'https://logodetimes.com/times/internacional/logo-internacional-4096.png', '2', '0', false, 1, 'Campeonato Brasileiro Série A'),
     ('2023-05-15 19:30:00', 'Palmeiras', 'https://crests.football-data.org/1769.png', 'Grêmio', 'https://seeklogo.com/images/G/Gr__mio_Porto_Alegre-logo-709819E2D9-seeklogo.com.png', '2', '2', true, 1, 'Campeonato Brasileiro Série A');
 
-SELECT * FROM Guess WHERE fkUser = 1 AND guessIsRight = TRUE;
+SELECT (SELECT COUNT(guessIsRight) FROM Guess WHERE fkUser = 1 AND guessIsRight = TRUE) AS rightGuesses, 
+(SELECT COUNT(guessIsRight) FROM Guess WHERE fkUser = 1 AND guessIsRight = FALSE) AS wrongGuesses;
+
+SELECT (SELECT COUNT(guessIsRight) FROM Guess WHERE guessIsRight = TRUE) AS rightGuesses, 
+(SELECT COUNT(guessIsRight) FROM Guess WHERE guessIsRight = FALSE) AS wrongGuesses;
+
+SELECT idUser, name, surname, COUNT(guessIsRight) FROM User JOIN Guess
+	ON idUser = fkUser WHERE guessIsRight = TRUE GROUP BY idUser, guessIsRight LIMIT 10;
 
 CREATE TABLE News (
 idNews INT PRIMARY KEY AUTO_INCREMENT,

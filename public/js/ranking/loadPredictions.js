@@ -85,3 +85,5 @@ function getLastPredictions() {
         throw ("Houve um erro ao tentar realizar o cadastro!")
     });
 }
+
+getLastPredictions();
