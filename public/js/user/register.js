@@ -1,20 +1,23 @@
 function register() {
-    const { username, userSurname, email, password, confirmPassword } = document.forms.namedItem('signUpForm');
+    const { username, userSurname, email, password, confirmPassword, profileImageInput } = document.forms.namedItem('signUpForm');
 
     const inputsAreValid = checkRegisterInputs(username, userSurname, email, password, confirmPassword);
-
+    
     if(inputsAreValid) {
+        const formData = new FormData();
+
+        formData.append('username', username.value);
+        formData.append('surname', userSurname.value);
+        formData.append('email', email.value);
+        formData.append('password', password.value);
+        formData.append('profileImage', profileImageInput.files[0])
+
         fetch('/user/register', {
             method: 'POST',
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "multipart/form-data"
             },
-            body: JSON.stringify({
-                name: username.value,
-                surname: userSurname.value,
-                email: email.value,
-                password: password.value
-            })
+            body: formData
         }).then((result) => {
             console.log(result);
             

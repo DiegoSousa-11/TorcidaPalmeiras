@@ -37,7 +37,14 @@
                     <h2>Crie sua conta</h2>
                     <p>Faça parte da torcida do maior campeão do Brasil agora mesmo!</p>
     
-                    <form action="" name="signUpForm">
+                    <form name="signUpForm">
+                        <label class="profileImageInput" for="profileImageInput">
+                            <div class="overlay">
+                                <p>Selecione uma imagem de perfil</p>
+                            </div>
+                        </label>
+                        <input type="file" name="profileImageInput" id="profileImageInput" accept="image/*" hidden>
+
                         <div>
                             <label>Nome</label>
                             <div class="formInput">

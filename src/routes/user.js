@@ -1,9 +1,13 @@
+var multer = require('multer');
 var express = require("express");
+
 var router = express.Router();
 
 var userController = require('../controllers/userController');
 
-router.post('/register', (req, res) => {
+var upload = multer({ dest: '../../public/assets/profileImages' });
+
+router.post('/register', upload.single('profileImage'), (req, res) => {
     userController.register(req, res);
 });
 

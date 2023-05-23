@@ -6,7 +6,7 @@ function verifySession() {
     var userID = sessionStorage.USER_ID;
 
     if(!name || !userID) {
-        homeHeader[0].innerHTML += '<a href="./LoginAndRegister"><button>Login</button></a>';
+        homeHeader[0].innerHTML += '<a href="../LoginAndRegister"><button>Login</button></a>';
     } else {
         homeHeader[0].innerHTML += `<p>Olá, <strong>${name}</strong></p>`;
     }

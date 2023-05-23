@@ -5,6 +5,11 @@
     padding: 0;
 
     font-family: 'Poppins', sans-serif;
+
+    scroll-behavior: smooth;
+
+    text-decoration: none;
+    color: #FFF;
 }
 
 :root {
@@ -140,11 +145,14 @@ main .home, main .history {
     color: var(--black);
 }
 
+.home a {
+    margin-left: auto;
+}
+
 section button {
     cursor: pointer;
 
     padding: 1.1rem 2rem;
-    margin-left: auto;
 
     border-radius: 15px;
     border: 1px solid transparent;
