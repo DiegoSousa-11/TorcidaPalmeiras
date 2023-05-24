@@ -88,22 +88,24 @@ async function getNextMatch() {
 }
 
 function verifyPrediction() {
-    fetch(`/user/${sessionStorage.USER_ID}/lastPrediction`, {
-        method: 'GET',
-        headers: {
-            "Content-Type": "application/json"
-        },
-    }).then((response) => response.json()).then((data) => {
-        if(data.length === 0)
-            return;
-
-        if(nextMatch.utcDate == data[0].matchDate) {
-            document.getElementById('homeGoals').value = data[0].homeGoals;
-            document.getElementById('awayGoals').value = data[0].awayGoals;
-
-            hiddenPredictionOption();
-        }
-    })
+    if(sessionStorage.USER_ID) {
+        fetch(`/user/${sessionStorage.USER_ID}/lastPrediction`, {
+            method: 'GET',
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }).then((response) => response.json()).then((data) => {
+            if(data.length === 0)
+                return;
+    
+            if(nextMatch.utcDate == data[0].matchDate) {
+                document.getElementById('homeGoals').value = data[0].homeGoals;
+                document.getElementById('awayGoals').value = data[0].awayGoals;
+    
+                hiddenPredictionOption();
+            }
+        })
+    }
 }
 
 function hiddenPredictionOption() {

@@ -42,7 +42,6 @@ async function getAllNews(urlRequest) {
                 newsCarousel.innerHTML += `
                     <div class="newsItemContainer" style="width: ${newsWidth}px">
                         <a class="newsItem" href=${url} style="background-image: url('${image[0].src}')">
-                            <span class="iconify" data-icon="mdi:cards-heart-outline"></span>
     
                             <div>
                                 <p>${author} • ${date}</p>

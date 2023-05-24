@@ -6,7 +6,7 @@ function register() {
     if(inputsAreValid) {
         const formData = new FormData();
 
-        formData.append('username', username.value);
+        formData.append('name', username.value);
         formData.append('surname', userSurname.value);
         formData.append('email', email.value);
         formData.append('password', password.value);
@@ -14,9 +14,6 @@ function register() {
 
         fetch('/user/register', {
             method: 'POST',
-            headers: {
-                "Content-Type": "multipart/form-data"
-            },
             body: formData
         }).then((result) => {
             console.log(result);

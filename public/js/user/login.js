@@ -32,6 +32,7 @@ function login() {
                     sessionStorage.USER_EMAIL = user.email;
                     sessionStorage.USER_NAME = `${user.name} ${user.surname}`;
                     sessionStorage.USER_ID = user.idUser;
+                    sessionStorage.USER_PROFILE_IMAGE = user.profileImage;
                     
                     window.location = '../index.html';
                 }

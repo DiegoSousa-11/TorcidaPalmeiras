@@ -1,12 +1,13 @@
 const userModel = require('../models/userModel');
 
 function register(req, res) {
+    const imagePath = req.file?.filename;
     const { name, surname, email, password } = req.body;
 
     if(!name || !surname || !email || !password) {
         res.status(400).send('Preencha todos os dados');
     } else {
-        userModel.register(name, surname, email, password).then((result) => {
+        userModel.register(name, surname, email, password, imagePath).then((result) => {
             res.json(result);
         }).catch((error) => {
             console.log(error);

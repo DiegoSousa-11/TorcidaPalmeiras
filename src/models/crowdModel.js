@@ -8,8 +8,8 @@ function getAssertivenessRate() {
 }
 
 function getCrowdRanking() {
-    const query = `SELECT idUser, name, surname, COUNT(guessIsRight) as rightGuesses FROM User JOIN Guess
-	ON idUser = fkUser WHERE guessIsRight = TRUE GROUP BY idUser, guessIsRight LIMIT 10;`;
+    const query = `SELECT idUser, name, surname, profileImage, COUNT(guessIsRight) as rightGuesses FROM User JOIN Guess
+	ON idUser = fkUser WHERE guessIsRight = TRUE GROUP BY idUser ORDER BY COUNT(guessIsRight) DESC LIMIT 10`;
 
     return database.execute(query);
 }

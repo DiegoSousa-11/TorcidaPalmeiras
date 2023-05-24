@@ -229,6 +229,10 @@ input:-webkit-autofill {
     -webkit-text-fill-color: var(--green) !important;
 }
 
+input:-webkit-autofill::selection {
+    -webkit-text-fill-color: #FFF !important;
+}
+
 .formInput input {
     outline: 0;
 

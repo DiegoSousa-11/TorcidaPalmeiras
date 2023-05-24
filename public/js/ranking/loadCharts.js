@@ -59,7 +59,7 @@ function createUserAssertivenessChart(data) {
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'middle';
         
-                    const text = `${rightGuessesPercentage}%`;
+                    const text = `${rightGuessesPercentage.toFixed(1)}%`;
         
                     ctx.fillText(text, canvasCenterCoords.x, canvasCenterCoords.y);
                 }
@@ -73,8 +73,8 @@ function createUserAssertivenessChart(data) {
     const rightGuessesPercentage = (rightGuesses * 100)/(wrongGuesses + rightGuesses);
     const wrongGuessesPercentage = 100 - rightGuessesPercentage;
 
-    rightGuessesPercentageText.innerHTML = rightGuessesPercentage + '%';
-    wrongGuessesPercentageText.innerHTML = wrongGuessesPercentage + '%';
+    rightGuessesPercentageText.innerHTML = rightGuessesPercentage.toFixed(2) + '%';
+    wrongGuessesPercentageText.innerHTML = wrongGuessesPercentage.toFixed(2) + '%';
 }
 
 function createAssertivenessChart(data) {
@@ -112,11 +112,20 @@ function createAssertivenessChart(data) {
                 beforeDatasetsDraw(chart) {
                     const ctx = chart.ctx;
     
+                    const wrongGuesses = chart.data.datasets[0].data[0];
+                    const rightGuesses = chart.data.datasets[0].data[1];
+    
+                    var rightGuessesPercentage = (rightGuesses * 100)/(wrongGuesses + rightGuesses);
+    
+                    if(!rightGuessesPercentage) {
+                        rightGuessesPercentage = 0;
+                    }
+                    
                     const canvasCenterCoords = {
                         x: ctx.canvas.clientHeight/2,
                         y: (ctx.canvas.clientWidth/2) + 3
                     }
-        
+    
                     ctx.save();
     
                     ctx.font = '800 2.2rem Poppins';
@@ -125,7 +134,7 @@ function createAssertivenessChart(data) {
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'middle';
         
-                    const text = '60%';
+                    const text = `${rightGuessesPercentage.toFixed(1)}%`;
         
                     ctx.fillText(text, canvasCenterCoords.x, canvasCenterCoords.y);
                 }
@@ -139,11 +148,34 @@ function createAssertivenessChart(data) {
     const rightGuessesPercentage = (rightGuesses * 100)/(wrongGuesses + rightGuesses);
     const wrongGuessesPercentage = 100 - rightGuessesPercentage;
 
-    rightGuessesPercentageText.innerHTML = rightGuessesPercentage + '%';
-    wrongGuessesPercentageText.innerHTML = wrongGuessesPercentage + '%';
+    rightGuessesPercentageText.innerHTML = rightGuessesPercentage.toFixed(2) + '%';
+    wrongGuessesPercentageText.innerHTML = wrongGuessesPercentage.toFixed(2) + '%';
 } 
 
-function createRankingChart(labels, data) {
+function createRankingChart(labels, data, images, userNames) {
+    var barAvatar = {
+        id: 'barAvatar',
+        afterDatasetDraw(chart, args, options) {
+            const { ctx, chartArea: { top, bottom, left, right, width, height }, 
+                scales: { x, y } 
+            } = chart;
+
+            ctx.save();         
+            
+            ctx.font = '500 15px Poppins';
+            ctx.fillStyle = '#FFF';
+
+            for(var i = 0; i < images.length; i++) {
+                const xCoordinate = x.getPixelForValue(i) - (30 / 2);
+                const yCoordinate = y.getPixelForValue(data[i]) - 80;
+                
+                ctx.drawImage(images[i], xCoordinate, yCoordinate, 50, 50);
+
+                ctx.fillText(userNames[i], xCoordinate - 20, yCoordinate + 70);
+            }
+        }
+    }
+
     var rankingUsersChartData = {
         labels: labels,
         datasets: [{
@@ -188,7 +220,7 @@ function createRankingChart(labels, data) {
                             family: 'Poppins',
                             size: 15
                         },
-                        stepSize: 15,
+                        stepSize: 5,
                         padding: 10
                     },
                     grid: {
@@ -201,6 +233,7 @@ function createRankingChart(labels, data) {
                 }
             }
         },
+        plugins: [barAvatar]
     });
 }
 

@@ -9,7 +9,6 @@
     scroll-behavior: smooth;
 
     text-decoration: none;
-    color: #FFF;
 }
 
 :root {
@@ -102,6 +101,20 @@ header button:hover {
     border-color: #FFF;
     color: #FFF;
     background-color: var(--green);
+}
+
+header .profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+}
+
+.profile img {
+    border-radius: 50%;
+
+    height: 5.2rem;
+    width: 5.2rem;
 }
 
 main .home, main .history {
@@ -218,7 +231,7 @@ section button:hover {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: end;
 
     padding: 1.5rem;
 

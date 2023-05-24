@@ -1,7 +1,7 @@
 var database = require('../database/config');
 
-function register(name, surname, email, password) {
-    const query = `INSERT INTO User (name, surname, email, password) VALUES ('${name}', '${surname}', '${email}', '${password}')`;
+function register(name, surname, email, password, imagePath) {
+    const query = `INSERT INTO User (name, surname, email, password, profileImage) VALUES ('${name}', '${surname}', '${email}', '${password}', '${imagePath}')`;
 
     return database.execute(query);
 }

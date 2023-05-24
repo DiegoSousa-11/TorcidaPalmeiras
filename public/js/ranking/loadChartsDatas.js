@@ -41,13 +41,23 @@ function loadCrowdRanking() {
     }).then((response) => response.json()).then((data) => {
         var labels = [];
         var chartData = [];
+        var images = [];
+        var userNames = [];
 
         for(var i = 0; i < data.length; i++) {
             labels.push(`${i + 1} º`);
             chartData.push(data[i].rightGuesses);
+
+            var image = new Image();
+
+            image.src = `../uploads/${data[i].profileImage}`;
+            image.style.borderRadius = '100%';
+
+            images.push(image);
+            userNames.push(`${data[i].name} ${data[i].surname}`)
         }
 
-        createRankingChart(labels, chartData);
+        createRankingChart(labels, chartData, images, userNames);
     }).catch((error) => {
         console.error(error);
         throw ("Houve um erro ao buscar o ranking da torcida");
