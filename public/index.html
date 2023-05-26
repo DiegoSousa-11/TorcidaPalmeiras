@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <script src="./js/NewsCarousel/news.js" defer></script>
     <script src="./js/NewsCarousel/newsCarousel.js" defer></script>
     <script src="./js/matches/loadMatches.js" defer></script>
     <script src="./js/validateSession.js" defer></script>
     <script src="./js/matches/createPrediction.js" defer></script>
+    <script src="../js/ranking/loadCharts.js" defer></script>
+    <script src="../js/ranking/loadChartsDatas.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./assets/img/logoPalmeiras.svg" type="image/x-icon">
     <title>Torcida Palmeiras</title>
 </head>
-<body onload="verifySession()">
+<body onload="verifySession(); loadCrowdRanking()">
     <header>
         <img src="./assets/img/logoPalmeiras.svg" alt="logoPalmeiras">
         <nav>
@@ -22,6 +25,7 @@
             <a href="#news">Notícias</a>
             <a href="#history">História</a>
             <a href="#matches">Jogos</a>
+            <a href="#ranking">Ranking</a>
         </nav>
     </header>
     
@@ -80,8 +84,6 @@
                     <div class="lastMatches">
                         
                     </div>
-    
-                    <button>Ver mais</button>
                 </div>
     
                 <div class="rightContent">
@@ -101,6 +103,20 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="ranking" class="rankingContainer">
+            <h1>Ranking</h1>
+
+            <div class="usersRanking">
+                <h2>Usuários que mais acertaram palpites</h2>
+
+                <div class="ranking">
+                    <canvas id="rankingUsersChartCanvas"></canvas>
+                </div>
+            </div>
+
+            <a href="./Ranking/"><button>Acessar dashboard<span class="iconify" data-icon="material-symbols:keyboard-arrow-right"></span></button></a>
         </section>
     </main>
 

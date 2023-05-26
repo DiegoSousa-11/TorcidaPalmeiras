@@ -237,6 +237,9 @@ function createRankingChart(labels, data, images, userNames) {
     });
 }
 
-loadUserAssertivenessRate();
-loadCrowdAssertivenessRate();
-loadCrowdRanking();
+function loadAllChartsData() {
+    loadUserAssertivenessRate();
+    loadCrowdAssertivenessRate();
+    loadCrowdRanking();
+}
+

@@ -147,7 +147,7 @@ main .home, main .history {
     width: 70%;
 }
 
-.home .container h1, .history .container h1 {
+.home .container h1, .history .container h1, .rankingContainer h1 {
     font-weight: 900;
     font-size: 3rem;
     color: var(--green);
@@ -456,21 +456,59 @@ section button:hover {
     font-weight: 700;
 }
 
-.rightContent div button {
-    background-color: #FFF;
-    color: var(--green);
-    border-color: var(--green);
-}
-
-.rightContent div button:hover {
-    border: 1px solid transparent;
-    background-color: var(--green);
-    color: #FFF;
-}
-
 .rightContent .nextMatch .match {
     background-color: #FFF;
     filter: drop-shadow(2px 2px 5px rgba(0, 100, 50, 0.5));
+}
+
+.rankingContainer {
+    display: flex;
+    flex-direction: column;
+
+    padding: 3rem 5rem;
+}
+
+.rankingContainer button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+}
+
+.rankingContainer button .iconify {
+    font-size: 2rem;
+    color: #FFF;
+    transition: .5s;
+}
+
+.rankingContainer button:hover .iconify {
+    color: var(--green);
+}
+
+.rankingContainer .usersRanking {
+    background-color: var(--lightGreen);
+    border-radius: 15px;
+
+    padding: 2rem 2.5rem;
+
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.usersRanking h2 {
+    color: #FFF;
+    font-size: 1.8rem;
+}
+
+.usersRanking .ranking {
+    padding: 4rem;
+
+    height: 50%;
+    width: 50%;
+
+    margin-inline: auto;
+    margin-top: auto;
 }
 
 footer {
