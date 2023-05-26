@@ -117,6 +117,14 @@ header .profile {
     width: 5.2rem;
 }
 
+.profile button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: .6rem .8rem;
+}
+
 main .home, main .history {
     display: flex;
     height: calc(90vh - 3rem);
@@ -468,12 +476,14 @@ section button:hover {
     padding: 3rem 5rem;
 }
 
+.rankingContainer a {
+    margin-left: auto;
+}
+
 .rankingContainer button {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    margin-left: auto;
 }
 
 .rankingContainer button .iconify {

@@ -12,9 +12,9 @@ function login(email, password) {
     return database.execute(query);
 }
 
-function createPrediction(homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, matchDate, competition, idUser) {
-    const query = `INSERT INTO Guess (homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, matchDate, competition, fkUser) 
-    VALUES ('${homeTeam}', '${homeTeamLogo}', '${awayTeam}', '${awayTeamLogo}', '${homeGoals}', '${awayGoals}', '${matchDate}', '${competition}', '${idUser}')`;
+function createPrediction(homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, matchDate, competition, idMatch, idUser) {
+    const query = `INSERT INTO Guess (homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, matchDate, competition, idMatch, fkUser) 
+    VALUES ('${homeTeam}', '${homeTeamLogo}', '${awayTeam}', '${awayTeamLogo}', '${homeGoals}', '${awayGoals}', '${matchDate}', '${competition}', '${idMatch}', '${idUser}')`;
 
     return database.execute(query);
 }

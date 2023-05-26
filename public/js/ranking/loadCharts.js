@@ -221,7 +221,7 @@ function createRankingChart(labels, data, images, userNames) {
                             size: 15
                         },
                         stepSize: 5,
-                        padding: 10
+                        padding: 10,
                     },
                     grid: {
                         color: '#FFFFFF1A',
@@ -230,6 +230,7 @@ function createRankingChart(labels, data, images, userNames) {
                     border: {
                         display: false
                     },
+                    min: 0
                 }
             }
         },

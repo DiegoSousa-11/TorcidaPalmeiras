@@ -40,15 +40,16 @@ function createPrediction(req, res) {
         homeGoals, 
         awayGoals, 
         matchDate,
-        competition
+        competition,
+        idMatch
     } = req.body;
 
     const { idUser } = req.params;
 
-    if(!homeTeam || !homeTeamLogo || !awayTeam || !awayTeamLogo || !homeGoals || !awayGoals || !matchDate || !idUser || !competition) {
+    if(!homeTeam || !homeTeamLogo || !awayTeam || !awayTeamLogo || !homeGoals || !awayGoals || !matchDate || !idUser || !competition || !idMatch) {
         res.status(400).send('Alguns dados estão vazios');
     } else {
-        userModel.createPrediction(homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, matchDate, competition, idUser).then((result) => {
+        userModel.createPrediction(homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, matchDate, competition, idMatch, idUser).then((result) => {
             res.json(result);
         }).catch((error) => {
             console.log(error);
@@ -90,11 +91,21 @@ function getAssertivenessRate(req, res) {
     });
 }
 
+function checkGuesses(req, res) {
+    userModel.checkGuesses().then((result) => {
+        res.json(result);
+    }).catch((error) => {
+        console.log(error);
+        res.status(500).json(error.sqlMessage);
+    });
+}
+
 module.exports = {
     register,
     login,
     createPrediction,
     getLastPrediction,
     getLastSixPredictions,
-    getAssertivenessRate
+    getAssertivenessRate,
+    checkGuesses
 }

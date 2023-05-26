@@ -24,11 +24,20 @@ CREATE TABLE Guess (
     awayGoals INT,
     guessIsRight TINYINT,
     fkUser INT,
+    idMatch INT,
     competition VARCHAR(200),
     CONSTRAINT fkUser FOREIGN KEY (fkUser) REFERENCES User(idUser)
 );
 
 SELECT * FROM Guess;
+
+SELECT distinct idMatch, idGuess, guessIsRight, matchDate FROM Guess ORDER BY idGuess DESC LIMIT 1;
+
+SELECT guessIsRight FROM Guess ORDER BY idGuess DESC LIMIT 1;
+
+INSERT INTO Guess (matchDate, homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, guessIsRight, fkUser, competition, idMatch)
+VALUES
+    ('2023-05-24T22:00:00Z', 'Cerro Porteño', 'https://crests.football-data.org/9373.png', 'Palmeiras', 'https://crests.football-data.org/1769.png', '0', '3', null, 1, 'Copa Libertadores', 433672);
 
 INSERT INTO Guess (matchDate, homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, guessIsRight, fkUser, competition)
 VALUES

@@ -41,7 +41,26 @@ async function getNextMatch(req, res) {
     }
 }
 
+async function getMatchById(idMatch) {
+    const options = {
+        method: 'GET',
+        url: `https://api.football-data.org/v4/matches/${idMatch}`,
+        headers: {
+            'X-Auth-Token': API_KEY_FOOTBALL,
+        },
+    };
+
+    try {
+        const response = await axios.request(options);
+
+        return response.data;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 module.exports = {
     listLastMatches,
     getNextMatch,
+    getMatchById
 }

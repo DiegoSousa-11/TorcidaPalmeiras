@@ -13,6 +13,12 @@ function verifySession() {
             <div class='profile'>
                 <img src="../uploads/${userProfileImage}" alt='imagem de perfil'>
                 <p>Olá, <strong>${name}</strong></p>
+                <button onclick='logout()'><span style='font-size: 1.4rem' class="iconify" data-icon="humbleicons:logout"></span></button>
             </div>`;
     }
+}
+
+function logout () {
+    sessionStorage.clear();
+    window.location.reload();
 }

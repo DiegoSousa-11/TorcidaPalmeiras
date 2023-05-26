@@ -9,6 +9,7 @@ var PORT = process.env.ENVIRONMENT_PROCESS === 'DEVELOPMENT' ? 3333 : 8000;
 
 var app = express();
 
+const { checkGuesses } = require('./src/models/crowdModel');
 var indexRouter = require('./src/routes/index');
 var matchRouter = require('./src/routes/match');
 var userRouter = require('./src/routes/user');
@@ -33,5 +34,8 @@ app.use("/match", matchRouter);
 app.use("/user", userRouter);
 app.use("/crowd", crowdRouter);
 
-app.listen(PORT, () => console.log(`Server is running at: http://localhost:${PORT}! 
-And you is using an ${process.env.ENVIRONMENT_PROCESS} environment`));
+app.listen(PORT, () => {
+    console.log(`Server is running at: http://localhost:${PORT}! 
+    And you is using an ${process.env.ENVIRONMENT_PROCESS} environment`)    
+    setInterval(() => checkGuesses(), 60000);
+});

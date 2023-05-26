@@ -12,6 +12,8 @@ async function getLastMatches() {
     await fetch(request).then((response) => response.json()).then((data) => {
         var matches = data.matches;
 
+        console.log(matches)
+
         for(var i = 0; i < matches.length; i++) {
             var match = matches[i];
 

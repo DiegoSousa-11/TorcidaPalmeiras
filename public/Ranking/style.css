@@ -55,7 +55,7 @@ section .container {
     gap: .5rem;
 }
 
-.assertivenessRate .graphicCaption > .rightGuesses > div::before {
+.assertivenessRate .graphicCaption > .wrongGuesses > div::before {
     background-color: #FFF;
 }
 

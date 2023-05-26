@@ -25,7 +25,8 @@ function createPrediction() {
             homeGoals: predictionHome,
             awayGoals: predictionAway,
             competition: nextMatch.competition.name,
-            matchDate: nextMatch.utcDate
+            matchDate: nextMatch.utcDate,
+            idMatch: nextMatch.id
         })
     }).then((result) => {
         console.log(result);
