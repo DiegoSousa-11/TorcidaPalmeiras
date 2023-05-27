@@ -1,3 +1,5 @@
+const rankingList = document.getElementById('rankingList');
+
 function loadUserAssertivenessRate() {
     const userID = sessionStorage.USER_ID;
 
@@ -58,8 +60,31 @@ function loadCrowdRanking() {
         }
 
         createRankingChart(labels, chartData, images, userNames);
+
+        if(rankingList) 
+            generateRankingList(labels, images, userNames);
+
+        if(document.getElementById("lastGuessesContainer"))
+            setTimeout(() => getLastPredictions(), 800)
+
     }).catch((error) => {
         console.error(error);
         throw ("Houve um erro ao buscar o ranking da torcida");
     });
 }
+
+function generateRankingList(labels, images, userNames) {
+    var limit = labels.length > 5 ? 5 : labels.length;
+
+    for(var i = 0; i < limit; i++) {
+        rankingList.innerHTML += `
+            <div class="rankingListItem">
+                <h1>${labels[i]}</h1>
+                <div>
+                    <img src="${images[i].src}" alt="profileImage">
+                    <strong>${userNames[i]}</strong>
+                </div>
+            </div>
+        `;
+    }
+}   

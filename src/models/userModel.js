@@ -26,7 +26,7 @@ function getLastPrediction(idUser) {
 }
 
 function getLastSixPredictions(idUser) {
-    const query = `SELECT * FROM Guess WHERE fkUser = ${idUser} ORDER BY idGuess DESC LIMIT 6`;
+    const query = `SELECT * FROM Guess WHERE fkUser = ${idUser} ORDER BY matchDate DESC LIMIT 6`;
 
     return database.execute(query);
 }

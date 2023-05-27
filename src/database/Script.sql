@@ -31,13 +31,11 @@ CREATE TABLE Guess (
 
 SELECT * FROM Guess;
 
-SELECT distinct idMatch, idGuess, guessIsRight, matchDate FROM Guess ORDER BY idGuess DESC LIMIT 1;
-
 SELECT guessIsRight FROM Guess ORDER BY idGuess DESC LIMIT 1;
 
 INSERT INTO Guess (matchDate, homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, guessIsRight, fkUser, competition, idMatch)
 VALUES
-    ('2023-05-24T22:00:00Z', 'Cerro Porteño', 'https://crests.football-data.org/9373.png', 'Palmeiras', 'https://crests.football-data.org/1769.png', '0', '3', null, 1, 'Copa Libertadores', 433672);
+    ('2023-05-24T22:00:00Z', 'Cerro Porteño', 'https://crests.football-data.org/9373.png', 'Palmeiras', 'https://crests.football-data.org/1769.png', '0', '1', null, 1, 'Copa Libertadores', 433672);
 
 INSERT INTO Guess (matchDate, homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, guessIsRight, fkUser, competition)
 VALUES
@@ -51,25 +49,16 @@ SELECT (SELECT COUNT(guessIsRight) FROM Guess WHERE fkUser = 1 AND guessIsRight 
 
 SELECT (SELECT COUNT(guessIsRight) FROM Guess WHERE guessIsRight = TRUE) AS rightGuesses, 
 (SELECT COUNT(guessIsRight) FROM Guess WHERE guessIsRight = FALSE) AS wrongGuesses;
+    
+SELECT idUser, name, surname, profileImage, 
+COUNT(CASE WHEN guessIsRight = TRUE THEN 1 END) AS correctGuesses
+FROM User
+LEFT JOIN Guess ON idUser = fkUser
+GROUP BY idUser
+ORDER BY COUNT(guessIsRight) DESC
+LIMIT 10;
 
-SELECT idUser, name, surname, profileImage, COUNT(guessIsRight) FROM User JOIN Guess
-	ON idUser = fkUser WHERE guessIsRight = TRUE GROUP BY idUser ORDER BY COUNT(guessIsRight) DESC LIMIT 10;
-
-CREATE TABLE News (
-idNews INT PRIMARY KEY AUTO_INCREMENT,
-author VARCHAR(45),
-title VARCHAR(45),
-link VARCHAR(45),
-imageURL VARCHAR(45),
-publishedAt VARCHAR(45)
-);
-
-CREATE TABLE NewsLike (
-fkNews INT,
-fkUser INT,
-CONSTRAINT fkNews FOREIGN KEY (fkNews) REFERENCES News(idNews),
-CONSTRAINT fkUserLike FOREIGN KEY (fkUser) REFERENCES User(idUser),
-CONSTRAINT pkComposed PRIMARY KEY (fkNews, fkUser)
-);
+UPDATE Guess SET guessIsRight = (CASE WHEN homeGoals = 0 AND awayGoals = 3 THEN TRUE ELSE FALSE END) WHERE idMatch = 433672;
+UPDATE Guess SET guessIsRight = TRUE WHERE homeGoals = 0 AND awayGoals = 3 AND idMatch = 433672;
 
 SELECT * FROM Guess WHERE fkUser = 1 ORDER BY idGuess DESC LIMIT 1;

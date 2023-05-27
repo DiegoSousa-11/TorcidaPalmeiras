@@ -19,8 +19,8 @@ function register() {
             console.log(result);
             
             if(result.ok) {
-                alert('Usuário cadastrado com sucesso');
                 switchScreen();
+                notification("Usuário cadastrado com sucesso!");
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!")
             }

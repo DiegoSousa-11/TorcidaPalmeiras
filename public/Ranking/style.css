@@ -90,7 +90,51 @@ section .container {
     display: flex;
     flex-wrap: wrap;
 
+    height: 80%;
+
     gap: 1rem;
+}
+
+.lastGuessesContainer .loader {
+    margin: auto;
+
+    width: 5rem;
+    height: 5rem;
+
+    border: 1rem solid #FFF;
+    border-right-color: var(--darkGreen);
+    border-radius: 50%;
+
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    } 
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.lastGuessesContainer .noGuesses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: #FFFFFFAA;
+}
+
+.noGuesses .iconify {
+    font-size: 5rem;
+}
+
+.noGuesses h1 {
+    color: #FFFFFFAA;
 }
 
 .lastGuesses h2 {
@@ -98,6 +142,7 @@ section .container {
 }
 
 .lastGuesses .guess {
+    height: fit-content;
     width: 32%;
 
     background-color: #FFF;

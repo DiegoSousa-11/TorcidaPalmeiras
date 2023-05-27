@@ -13,6 +13,7 @@
     <script src="./js/matches/createPrediction.js" defer></script>
     <script src="../js/ranking/loadCharts.js" defer></script>
     <script src="../js/ranking/loadChartsDatas.js" defer></script>
+    <script src="./js/notification.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./assets/img/logoPalmeiras.svg" type="image/x-icon">
     <title>Torcida Palmeiras</title>
@@ -107,12 +108,18 @@
 
         <section id="ranking" class="rankingContainer">
             <h1>Ranking</h1>
-
+            
             <div class="usersRanking">
                 <h2>Usuários que mais acertaram palpites</h2>
 
-                <div class="ranking">
-                    <canvas id="rankingUsersChartCanvas"></canvas>
+                <div class="container">
+                    <div id="rankingList" class="rankingList">
+                        
+                    </div>
+
+                    <div class="ranking">
+                        <canvas id="rankingUsersChartCanvas"></canvas>
+                    </div>
                 </div>
             </div>
 

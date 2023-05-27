@@ -9,8 +9,13 @@ function getAssertivenessRate() {
 }
 
 function getCrowdRanking() {
-    const query = `SELECT idUser, name, surname, profileImage, COUNT(guessIsRight) as rightGuesses FROM User JOIN Guess
-	ON idUser = fkUser WHERE guessIsRight = TRUE GROUP BY idUser ORDER BY COUNT(guessIsRight) DESC LIMIT 10`;
+    const query = `SELECT idUser, name, surname, profileImage, 
+        COUNT(CASE WHEN guessIsRight = TRUE THEN 1 END) AS rightGuesses
+        FROM User
+        LEFT JOIN Guess ON idUser = fkUser
+        GROUP BY idUser
+        ORDER BY COUNT(guessIsRight) DESC
+        LIMIT 10;`;
 
     return database.execute(query);
 }
@@ -26,17 +31,9 @@ function checkGuesses() {
             if(selectResult[i].guessIsRight == null && currentDate > matchDate) {
                 matchController.getMatchById(selectResult[i].idMatch).then((result) => {
                     if(result.status == 'FINISHED') {
-                        var queryUpdate = `
-                            UPDATE Guess SET guessIsRight = TRUE WHERE homeGoals = ${result.score.fullTime.home} AND awayGoals = ${result.score.fullTime.away} AND idMatch = ${result.id};
-                        `;
-                        
-                        database.execute(queryUpdate);
+                        const query = `UPDATE Guess SET guessIsRight = (CASE WHEN homeGoals = ${result.score.fullTime.home} AND awayGoals = ${result.score.fullTime.away} THEN TRUE ELSE FALSE END) WHERE idMatch = ${result.id};`;
 
-                        queryUpdate = `
-                            UPDATE Guess SET guessIsRight = FALSE WHERE homeGoals != ${result.score.fullTime.home} OR awayGoals != ${result.score.fullTime.away} AND idMatch = ${result.id};
-                        `;
-
-                        database.execute(queryUpdate);
+                        database.execute(query);
                     }
                 });
             }

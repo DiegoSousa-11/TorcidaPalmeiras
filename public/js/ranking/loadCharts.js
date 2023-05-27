@@ -53,7 +53,7 @@ function createUserAssertivenessChart(data) {
     
                     ctx.save();
     
-                    ctx.font = '800 2.2rem Poppins';
+                    ctx.font = '800 2rem Poppins';
                     ctx.fillStyle = '#FFF';
                     
                     ctx.textAlign = 'center';
@@ -70,8 +70,16 @@ function createUserAssertivenessChart(data) {
     const rightGuessesPercentageText = document.getElementById('userRightGuessesPercentage');
     const wrongGuessesPercentageText = document.getElementById('userWrongGuessesPercentage');
 
-    const rightGuessesPercentage = (rightGuesses * 100)/(wrongGuesses + rightGuesses);
-    const wrongGuessesPercentage = 100 - rightGuessesPercentage;
+    var rightGuessesPercentage = (rightGuesses * 100)/(wrongGuesses + rightGuesses);
+    var wrongGuessesPercentage = 100 - rightGuessesPercentage;
+
+    if(isNaN(rightGuessesPercentage)) {
+        rightGuessesPercentage = 0;
+    }
+
+    if(isNaN(wrongGuessesPercentage)) {
+        wrongGuessesPercentage = 0;;
+    }
 
     rightGuessesPercentageText.innerHTML = rightGuessesPercentage.toFixed(2) + '%';
     wrongGuessesPercentageText.innerHTML = wrongGuessesPercentage.toFixed(2) + '%';
@@ -128,7 +136,7 @@ function createAssertivenessChart(data) {
     
                     ctx.save();
     
-                    ctx.font = '800 2.2rem Poppins';
+                    ctx.font = '800 2rem Poppins';
                     ctx.fillStyle = '#FFF';
                     
                     ctx.textAlign = 'center';
@@ -145,8 +153,16 @@ function createAssertivenessChart(data) {
     const rightGuessesPercentageText = document.getElementById('crowdRightGuessesPercentage');
     const wrongGuessesPercentageText = document.getElementById('crowdWrongGuessesPercentage');
 
-    const rightGuessesPercentage = (rightGuesses * 100)/(wrongGuesses + rightGuesses);
-    const wrongGuessesPercentage = 100 - rightGuessesPercentage;
+    var rightGuessesPercentage = (rightGuesses * 100)/(wrongGuesses + rightGuesses);
+    var wrongGuessesPercentage = 100 - rightGuessesPercentage;
+
+    if(isNaN(rightGuessesPercentage)) {
+        rightGuessesPercentage = 0;
+    }
+
+    if(isNaN(wrongGuessesPercentage)) {
+        wrongGuessesPercentage = 0;;
+    }
 
     rightGuessesPercentageText.innerHTML = rightGuessesPercentage.toFixed(2) + '%';
     wrongGuessesPercentageText.innerHTML = wrongGuessesPercentage.toFixed(2) + '%';
@@ -221,17 +237,19 @@ function createRankingChart(labels, data, images, userNames) {
                             size: 15
                         },
                         stepSize: 5,
-                        padding: 10,
                     },
+                    beginAtZero: true,
                     grid: {
                         color: '#FFFFFF1A',
                         lineWidth: 2,
+                        
                     },
                     border: {
                         display: false
                     },
-                    min: 0
-                }
+                    suggestedMax: data[data.length - 1] + 1,
+                    suggestedMin: 0,
+                },
             }
         },
         plugins: [barAvatar]

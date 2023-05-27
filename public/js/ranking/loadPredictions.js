@@ -11,6 +11,17 @@ function getLastPredictions() {
   })
     .then((response) => response.json())
     .then((data) => {
+        lastGuessesContainer.innerHTML = '';
+
+        if(data.length === 0) {
+            lastGuessesContainer.innerHTML = `
+                <div class='noGuesses'>
+                    <span class="iconify" data-icon="mdi:whistle"></span>
+                    <h1>Seus palpites aparecerão aqui</h1>
+                </div>
+            `;
+        }
+
         for (var i = 0; i < data.length; i++) {
             const match = data[i];
             const matchDay = new Date(match.matchDate).getDate() >= 9 ? new Date(match.matchDate).getDate() : '0' + new Date(match.matchDate).getDate();
@@ -85,5 +96,3 @@ function getLastPredictions() {
         throw ("Houve um erro ao tentar realizar o cadastro!")
     });
 }
-
-getLastPredictions();

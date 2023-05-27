@@ -33,6 +33,7 @@ function createPrediction() {
         
         if(result.ok) {
             hiddenPredictionOption();
+            notification("Palpite realizado com sucesso!");
         } else {
             throw ("Houve um erro ao tentar realizar o palpite!")
         }
