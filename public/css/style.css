@@ -11,6 +11,18 @@
     text-decoration: none;
 }
 
+@media(max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media(max-width: 820px) {
+    html {
+        font-size: 83.5%;
+    }
+}
+
 :root {
     --green: #006432;
     --lightGreen: #00984C;
@@ -692,6 +704,18 @@ footer .socialMedia .iconify {
     border-radius: 5px;
 }
 
+.alertNotification .content strong {
+    color: #EE9500;
+}
+
+.alertNotification .iconify {
+    background-color: #EE9500;
+}
+
+.alertNotification .progressBar div{
+    background-color: #EE9500 !important;
+}
+
 .notification .progressBar {
     height: .5rem;
     width: 100%;
@@ -708,4 +732,87 @@ footer .socialMedia .iconify {
     width: 0%;
 
     transition: .3s;
+}
+
+@media (max-width: 1300px) {
+    header {
+        font-size: 1.1rem;
+    }
+
+    .profile img {
+        height: 4.5rem;
+        width: 4.5rem;
+    }
+
+    .profile p {
+        font-size: 1rem;
+    }
+
+    .home .container p, .history .container p {
+        font-size: .9rem;
+    }
+
+    .home .container h1, .history .container h1 {
+        font-size: 2.5rem;
+    }
+
+    section button {
+        padding: 1rem 1.8rem;
+        font-size: 0.9rem;
+    }
+
+    .newsItem div p {
+        font-size: .8rem;
+    }
+
+    .newsItem h3 {
+        font-size: 1rem;
+    }
+
+    .match {
+        width: 80%;
+    }
+
+    .match p {
+        font-size: .9rem;
+        margin-inline: 0;
+    }
+
+    .teamScore h1 {
+        font-size: 3.1rem;
+        width: 1.8rem;
+    }
+
+    .match .team img {
+        height: 4rem;
+    }
+    
+    .match .team h4 {
+        font-size: 1rem;
+    }
+
+    .nextMatch .match {
+        width: 100%;
+    }
+
+    .rankingList {
+        margin-top: 1.8rem;
+    }
+
+    .rankingListItem {
+        height: 3.5rem;
+    }
+
+    .rankingListItem h1 {
+        font-size: 2rem;
+        width: 4.5rem;
+    }
+    
+    .rankingListItem div strong {
+        font-size: 1rem;
+    }
+
+    .rightContent .scoreboard input {
+        width: 2rem;
+    }
 }

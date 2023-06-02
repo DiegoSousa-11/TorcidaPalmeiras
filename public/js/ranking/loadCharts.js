@@ -257,8 +257,12 @@ function createRankingChart(labels, data, images, userNames) {
 }
 
 function loadAllChartsData() {
-    loadUserAssertivenessRate();
-    loadCrowdAssertivenessRate();
-    loadCrowdRanking();
+    if(sessionStorage.USER_ID) {
+        loadUserAssertivenessRate();
+        loadCrowdAssertivenessRate();
+        loadCrowdRanking();
+    } else {
+        window.location = '../LoginAndRegister';
+    }
 }
 

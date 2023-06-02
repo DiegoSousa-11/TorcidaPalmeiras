@@ -4,12 +4,12 @@ function createPrediction() {
 
     var userID = sessionStorage.USER_ID;
 
-    if(!predictionHome || !predictionAway) {
-        return alert('Preencha os resultados!');
+    if(!userID) {
+        return notification('É necessário estar logado no nosso sistema para palpitar!', true);
     }
 
-    if(!userID) {
-        return alert('É necessário estar logado no nosso sistema para palpitar!');
+    if(!predictionHome || !predictionAway) {
+        return notification('Preencha os resultados!', true);
     }
 
     fetch(`/user/${userID}/createPrediction`, {

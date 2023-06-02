@@ -7,7 +7,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 5;
-    width: 95%;
+    width: calc(100vw - 6rem);
 }
 
 main {
@@ -189,4 +189,43 @@ main .sectionCards {
 
     font-size: 4rem;
     color: #FFF;
+}
+
+@media (max-width: 1300px) {
+    .currentCard h4 {
+        font-size: 3rem;
+    }
+
+    .currentCard h1 {
+        font-size: 3rem;
+    }
+
+    .currentCard p {
+        font-size: .9rem;
+    }
+
+    .card h4 {
+        font-size: 1.2rem;
+    }
+
+    .card h1 {
+        font-size: 1.3rem;
+    }
+
+    .nextCards .card {
+        padding: 1.5rem;
+        width: 12vw;
+    }
+    
+    .nextCards .controllers {
+        margin: 1rem 0;
+    }
+    
+    .controllers button {
+        padding: 0.6rem;
+    }
+
+    .controllers h1 {
+        font-size: 3rem;
+    }
 }

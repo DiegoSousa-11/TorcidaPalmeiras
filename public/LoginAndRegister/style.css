@@ -250,3 +250,22 @@ input:-webkit-autofill::selection {
 .form button {
     width: 100%;
 }
+
+@media (max-width: 1300px) { 
+    .switchScreen {
+        width: 55%;
+    }
+
+    .switchScreen .buttonSwitch {
+        width: 14%;
+        left: 11%;
+    }
+
+    .form {
+        width: 50%;
+    }
+
+    .alerts p {
+        font-size: .85rem;
+    }
+}

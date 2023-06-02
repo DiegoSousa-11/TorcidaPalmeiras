@@ -7,9 +7,11 @@ var signUpForm = document.getElementById('signUpForm');
 var signInForm = document.getElementById('signInForm');
 var banner = document.getElementById('banner');
 
+switchButton.style.left = (switchContainer.getBoundingClientRect().x) + 5 + 'px';
+
 function switchScreen() {
     if(CURRENT_SCREEN === 'REGISTER') {
-        switchButton.style.left = '25%';
+        switchButton.style.left = (switchContainer.getBoundingClientRect().x + switchContainer.clientWidth/2) + 'px';
         switchContainer.children[0].classList.remove('activeScreen');
         switchContainer.children[1].classList.add('activeScreen');
         
@@ -19,7 +21,7 @@ function switchScreen() {
 
         CURRENT_SCREEN = 'LOGIN';
     } else {
-        switchButton.style.left = '15%';
+        switchButton.style.left = (switchContainer.getBoundingClientRect().x) + 5 + 'px';
         switchContainer.children[1].classList.remove('activeScreen');
         switchContainer.children[0].classList.add('activeScreen');
 
