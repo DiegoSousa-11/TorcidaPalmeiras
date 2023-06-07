@@ -247,7 +247,7 @@ function createRankingChart(labels, data, images, userNames) {
                     border: {
                         display: false
                     },
-                    suggestedMax: data[data.length - 1] + 1,
+                    suggestedMax: data[0] + 1,
                     suggestedMin: 0,
                 },
             }

@@ -2,6 +2,8 @@ var TIME_TO_NEXT_HISTORY = 5000;
 var TIME_TO_UPDATE_PROGRESS = 50;
 
 var progress = document.querySelector('#progressBar .progress');
+var pauseOrPlayButton = document.getElementById('pauseOrPlayButton');
+
 var progressBarWidth = 0;
 
 var intervalHistoryController = setInterval(() => {
@@ -13,6 +15,29 @@ var intervalHistoryController = setInterval(() => {
 }, TIME_TO_NEXT_HISTORY);
 
 var intervalProgressBar = setInterval(() => increaseProgress(), TIME_TO_UPDATE_PROGRESS);
+
+function pauseSliders() {
+    progressBarWidth = 0;
+    clearInterval(intervalHistoryController);
+    clearInterval(intervalProgressBar);
+
+    pauseOrPlayButton.innerHTML = '<span class="iconify" data-icon="bi:play-fill"></span>';
+    pauseOrPlayButton.onclick = () => playSliders();
+}
+
+function playSliders() {
+    intervalProgressBar = setInterval(() => increaseProgress(), TIME_TO_UPDATE_PROGRESS);
+    intervalHistoryController = setInterval(() => {
+        if(CURRENT_HISTORY_INDEX == historyItems.length - 1) {
+            openHistory(0);
+        } else {
+            openHistory(CURRENT_HISTORY_INDEX + 1);
+        }
+    }, TIME_TO_NEXT_HISTORY);
+
+    pauseOrPlayButton.innerHTML = '<span class="iconify" data-icon="ion:pause"></span>';
+    pauseOrPlayButton.onclick = () => pauseSliders();
+}
 
 function increaseProgress() {
     var progressCount = 100/(TIME_TO_NEXT_HISTORY/TIME_TO_UPDATE_PROGRESS)
@@ -39,7 +64,7 @@ function openHistory(historyIndex) {
         
         currentCard.querySelector('h1').innerHTML = historyItems[historyIndex].title;
         currentCard.querySelector('h4').innerHTML = historyItems[historyIndex].year;
-        currentCard.querySelector('p').innerHTML = historyItems[historyIndex].text;
+        currentCard.querySelector('span').innerHTML = historyItems[historyIndex].text;
         currentCard.style.transform = 'scale(1)';
         
         main.item(0).style.backgroundSize = '100%';

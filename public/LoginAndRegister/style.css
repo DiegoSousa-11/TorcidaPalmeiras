@@ -251,7 +251,7 @@ input:-webkit-autofill::selection {
     width: 100%;
 }
 
-@media (max-width: 1300px) { 
+@media (max-width: 1550px) { 
     .switchScreen {
         width: 55%;
     }

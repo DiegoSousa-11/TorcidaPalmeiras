@@ -27,38 +27,18 @@ CREATE TABLE Guess (
     idMatch INT,
     competition VARCHAR(200),
     CONSTRAINT fkUser FOREIGN KEY (fkUser) REFERENCES User(idUser)
+    
 );
 
 SELECT * FROM Guess;
 
-SELECT guessIsRight FROM Guess ORDER BY idGuess DESC LIMIT 1;
-
-INSERT INTO Guess (matchDate, homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, guessIsRight, fkUser, competition, idMatch)
-VALUES
-    ('2023-05-24T22:00:00Z', 'Cerro Porteño', 'https://crests.football-data.org/9373.png', 'Palmeiras', 'https://crests.football-data.org/1769.png', '0', '1', null, 1, 'Copa Libertadores', 433672);
-
-INSERT INTO Guess (matchDate, homeTeam, homeTeamLogo, awayTeam, awayTeamLogo, homeGoals, awayGoals, guessIsRight, fkUser, competition)
-VALUES
-    ('2023-05-02 19:00:00', 'Palmeiras', 'https://crests.football-data.org/1769.png', 'Flamengo', 'https://logodownload.org/wp-content/uploads/2016/09/flamengo-logo-escudo-novo.png', '2', '1', true, 1, 'Campeonato Brasileiro Série A'),
-    ('2023-05-10 18:30:00', 'Palmeiras', 'https://crests.football-data.org/1769.png', 'São Paulo', 'https://upload.wikimedia.org/wikipedia/pt/4/4b/S%C3%A3o_Paulo_Futebol_Clube.png', '1', '1', true, 1, 'Campeonato Brasileiro Série A'),
-    ('2023-05-05 21:00:00', 'Palmeiras', 'https://crests.football-data.org/1769.png', 'Internacional', 'https://logodetimes.com/times/internacional/logo-internacional-4096.png', '2', '0', false, 1, 'Campeonato Brasileiro Série A'),
-    ('2023-05-15 19:30:00', 'Palmeiras', 'https://crests.football-data.org/1769.png', 'Grêmio', 'https://seeklogo.com/images/G/Gr__mio_Porto_Alegre-logo-709819E2D9-seeklogo.com.png', '2', '2', true, 1, 'Campeonato Brasileiro Série A');
-
-SELECT (SELECT COUNT(guessIsRight) FROM Guess WHERE fkUser = 1 AND guessIsRight = TRUE) AS rightGuesses, 
-(SELECT COUNT(guessIsRight) FROM Guess WHERE fkUser = 1 AND guessIsRight = FALSE) AS wrongGuesses;
-
-SELECT (SELECT COUNT(guessIsRight) FROM Guess WHERE guessIsRight = TRUE) AS rightGuesses, 
-(SELECT COUNT(guessIsRight) FROM Guess WHERE guessIsRight = FALSE) AS wrongGuesses;
+-- Palpites corretos
+INSERT INTO Guess VALUES
+	(null, '2023-05-21T00:00:00Z', 'Santos', 'https://crests.football-data.org/6685.png', 'Palmeiras', 'https://crests.football-data.org/1769.png', 0, 0, null, 1, 432383, 'Campeonato Brasileiro Série A'),
+	(null, '2023-05-24T22:00:00Z', 'Cerro Porteño', 'https://crests.football-data.org/9373.png', 'Palmeiras', 'https://crests.football-data.org/1769.png', 1, 3, null, 1, 433672, 'Copa Libertadores'),
+	(null, '2023-05-28T21:30:00Z', 'Mineiro', 'https://crests.football-data.org/1766.png', 'Palmeiras', 'https://crests.football-data.org/1769.png', 1, 1, null, 1, 432371, 'Campeonato Brasileiro Série A'),
+	(null, '2023-06-04T21:30:00Z', 'Palmeiras', 'https://crests.football-data.org/1769.png', 'Coritiba', 'https://crests.football-data.org/4241.png', 3, 1, null, 1, 432357, 'Campeonato Brasileiro Série A');
     
-SELECT idUser, name, surname, profileImage, 
-COUNT(CASE WHEN guessIsRight = TRUE THEN 1 END) AS correctGuesses
-FROM User
-LEFT JOIN Guess ON idUser = fkUser
-GROUP BY idUser
-ORDER BY COUNT(guessIsRight) DESC
-LIMIT 10;
-
-UPDATE Guess SET guessIsRight = (CASE WHEN homeGoals = 0 AND awayGoals = 3 THEN TRUE ELSE FALSE END) WHERE idMatch = 433672;
-UPDATE Guess SET guessIsRight = TRUE WHERE homeGoals = 0 AND awayGoals = 3 AND idMatch = 433672;
-
-SELECT * FROM Guess WHERE fkUser = 1 ORDER BY idGuess DESC LIMIT 1;
+-- Palpite correto (Simulação)
+INSERT INTO Guess VALUES
+	(null, '2023-06-04T21:30:00Z', 'Palmeiras', 'https://crests.football-data.org/1769.png', 'Coritiba', 'https://crests.football-data.org/4241.png', 3, 1, null, 1, 432357, 'Campeonato Brasileiro Série A');

@@ -734,7 +734,7 @@ footer .socialMedia .iconify {
     transition: .3s;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1550px) {
     header {
         font-size: 1.1rem;
     }
@@ -813,6 +813,7 @@ footer .socialMedia .iconify {
     }
 
     .rightContent .scoreboard input {
-        width: 2rem;
+        width: 3rem;
+        text-align: center;
     }
 }

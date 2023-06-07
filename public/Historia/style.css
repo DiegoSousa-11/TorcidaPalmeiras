@@ -68,6 +68,10 @@ main .sectionCards {
     transition: transform .5s ease;
 }
 
+.currentCard span {
+    background-color: #00643250;
+}
+
 .nextCards {
     user-select: none;
     margin-right: -10vw;
@@ -191,7 +195,7 @@ main .sectionCards {
     color: #FFF;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1550px) {
     .currentCard h4 {
         font-size: 3rem;
     }

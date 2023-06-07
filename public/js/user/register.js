@@ -1,7 +1,7 @@
 function register() {
     const { username, userSurname, email, password, confirmPassword, profileImageInput } = document.forms.namedItem('signUpForm');
 
-    const inputsAreValid = checkRegisterInputs(username, userSurname, email, password, confirmPassword);
+    const inputsAreValid = checkRegisterInputs(username, userSurname, email, password, confirmPassword, profileImageInput);
     
     if(inputsAreValid) {
         const formData = new FormData();
@@ -40,7 +40,7 @@ function checkRegisterInputs(username, userSurname, email, password, confirmPass
         alertsContainer.innerHTML = `
             <p style='color: #E7584F'>
                 <span class="iconify" data-icon="ic:round-close"></span>
-                Todos os campos devem ser preenchidos
+                Todos os campos devem ser preenchidos e uma imagem deve ser escolhida
             </p>
         `;
 
@@ -50,6 +50,24 @@ function checkRegisterInputs(username, userSurname, email, password, confirmPass
             <p style='color: #00984C'>
                 <span class="iconify" data-icon="ic:round-check"></span>
                 Todos os campos devem ser preenchidos
+            </p>
+        `;
+    }
+
+    if(!profileImageInput.files[0]) {
+        alertsContainer.innerHTML += `
+            <p style='color: #E7584F'>
+                <span class="iconify" data-icon="ic:round-close"></span>
+                Uma imagem deve ser escolhida
+            </p>
+        `;
+
+        allInputsAreValid = false;
+    } else {
+        alertsContainer.innerHTML += `
+            <p style='color: #00984C'>
+                <span class="iconify" data-icon="ic:round-check"></span>
+                Uma imagem deve ser escolhida
             </p>
         `;
     }

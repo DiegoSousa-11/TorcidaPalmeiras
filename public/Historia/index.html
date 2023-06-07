@@ -29,7 +29,7 @@
         <section id="currentHistoryCard" class="currentCard">
             <h4></h4>
             <h1></h1>
-            <p></p>
+            <p><span></span></p>
         </section>
 
         <section class="sectionCards">
@@ -41,6 +41,10 @@
                 <div class="controllers">
                     <button onclick="openHistory(CURRENT_HISTORY_INDEX-1)" class="moveLeft">
                         <span class="iconify" data-icon="material-symbols:keyboard-arrow-left"></span>
+                    </button>
+
+                    <button id="pauseOrPlayButton" onclick="pauseSliders()" class="pause">
+                        <span class="iconify" data-icon="ion:pause"></span>
                     </button>
                     
                     <button onclick="openHistory(CURRENT_HISTORY_INDEX+1)" class="moveRight">
